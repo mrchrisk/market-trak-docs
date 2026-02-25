@@ -1,0 +1,165 @@
+---
+title: Integrations and Sharing Options
+description: Learn how to connect Market Trak with social media platforms and other tools to seamlessly share content and expand your online presence as an estate agent.
+---
+
+## Overview
+
+Market Trak makes it easy to share your hyper-local market reports across platforms. Connect your social media accounts for one-click posting, embed reports in email campaigns, set up webhooks for real-time lead notifications, and integrate with CRM systems to manage leads efficiently. These integrations help you build authority in your local UK property market without leaving the dashboard.
+
+<Callout kind="info">
+Enable integrations from your [Market Trak Dashboard](https://dashboard.example.com/settings/integrations). You need admin access and a verified account.
+</Callout>
+
+## Available Integrations
+
+<Columns cols={2}>
+  <Card title="Social Media" icon="share-2" href="#social-media">
+    Post reports directly to Facebook, X (Twitter), and LinkedIn.
+  </Card>
+  <Card title="Email Campaigns" icon="mail" href="#email">
+    Embed interactive reports in Mailchimp or Klaviyo emails.
+  </Card>
+  <Card title="Webhooks" icon="zap" href="#webhooks">
+    Receive instant notifications for new leads.
+  </Card>
+  <Card title="CRM Systems" icon="database" href="#crm">
+    Sync leads with HubSpot, Pipedrive, or Salesforce.
+  </Card>
+</Columns>
+
+## One-Click Social Media Posting
+
+Connect your accounts to post Seller's Guides and Data Sheets with one click. Posts include branded visuals and your contact details.
+
+<Tabs>
+  <Tab title="Facebook" icon="facebook">
+    <Steps>
+      <Step title="Connect Account" icon="link">
+        Go to Dashboard > Integrations > Facebook. Click `Connect` and authorize Market Trak.
+      </Step>
+      <Step title="Post Report">
+        Select a report, click `Post to Facebook`. Customize caption and schedule.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="X (Twitter)" icon="twitter">
+    <Steps>
+      <Step title="Connect Account" icon="link">
+        Navigate to Integrations > X. Sign in with your X credentials.
+      </Step>
+      <Step title="Share Instantly">
+        Choose report > `Post to X`. Thread format auto-generates key stats.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="LinkedIn" icon="linkedin">
+    Follow the same connect process. Posts appear as professional updates with charts.
+  </Tab>
+</Tabs>
+
+## Embedding Reports in Email Campaigns
+
+Embed live reports in emails for interactive market insights. Recipients see updated data without leaving their inbox.
+
+Use this embed code in Mailchimp, Klaviyo, or any HTML email builder:
+
+<CodeGroup tabs="HTML,iFrame">
+  ```html
+  <div data-mt-report="seller-guide" data-id="report-abc123">
+    Loading Market Trak report...
+  </div>
+  <script src="https://cdn.example.com/market-trak-embed.js"></script>
+  ```
+  ```html
+  <iframe
+    src="https://dashboard.example.com/embed/report/abc123"
+    width="100%"
+    height="600"
+    frameborder="0"
+  ></iframe>
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+Test embeds in preview mode. Reports auto-update with latest UK property data.
+</Callout>
+
+## Setting Up Webhooks for Lead Notifications
+
+Webhooks notify your server when a lead submits via a shared report. Configure in Dashboard > Integrations > Webhooks.
+
+<Steps>
+  <Step title="Create Webhook" icon="plus">
+    Enter your endpoint URL (e.g., `https://your-webhook-url.com/lead`), select events (`new-lead`), and save.
+  </Step>
+  <Step title="Verify Payload">
+    Market Trak sends a POST with lead details. Use this example to handle:
+  </Step>
+  <Step title="Secure Endpoint">
+    Add HMAC signature verification using your webhook secret.
+  </Step>
+</Steps>
+
+Example webhook payload:
+
+<Response tabs="Success,Error" show-lines="true">
+  ```json
+  {
+    "event": "new-lead",
+    "reportId": "abc123",
+    "lead": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "+44 123 456 7890",
+      "postcode": "SW1A 1AA",
+      "message": "Interested in market report"
+    },
+    "timestamp": "2024-10-15T14:30:00Z"
+  }
+  ```
+
+  ```json
+  {
+    "error": "Invalid signature",
+    "timestamp": "2024-10-15T14:30:00Z"
+  }
+  ```
+</Response>
+
+<ParamField header="X-MT-Signature" param-type="string" required="true">
+  HMAC SHA256 of payload using your secret. Verify server-side.
+</ParamField>
+
+## Connecting with CRM Systems
+
+Sync leads automatically to streamline management.
+
+<Columns cols={3}>
+  <Card title="HubSpot" icon="activity" href="https://hubspot.com" target="_blank">
+    <Steps>
+      <Step title="Connect">
+        Enter HubSpot API key in Market Trak settings.
+      </Step>
+    </Steps>
+    Creates contacts with report context.
+  </Card>
+  <Card title="Pipedrive" icon="git-branch" href="https://pipedrive.com" target="_blank">
+    Map fields like postcode to custom fields. Leads become deals.
+  </Card>
+  <Card title="Salesforce" icon="shield" href="https://salesforce.com" target="_blank">
+    OAuth connection. Supports custom objects for estate agent workflows.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced CRM Mapping" default-open="false">
+Customize field mappings in Dashboard > Integrations > CRM. For example, map `postcode` to a geolocation field.
+</Expandable>
+
+## Next Steps
+
+Test your first integration today. Start with social posting for quick visibility. For support, check the [Help Center](/help-center).
+
+<Callout kind="success">
+Integrations update automatically with new features. Monitor usage in Dashboard analytics.
+</Callout>

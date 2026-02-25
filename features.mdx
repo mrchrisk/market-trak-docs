@@ -1,0 +1,178 @@
+---
+title: Core Features of Market Trak
+description: Explore the essential tools in Market Trak for creating market intelligence reports, building social content, and automating lead capture to grow your estate agency.
+---
+
+## Overview
+
+Market Trak equips UK estate agents with powerful tools to generate hyper-local market reports, customize content for your postcode areas, and capture leads automatically. You create seller's guides, data sheets, and articles using live UK property data. Customize outputs with specific postcodes and embed opt-in forms to build your pipeline.
+
+<Callout kind="tip">
+Start with your local postcode to generate reports that position you as the market expert.
+</Callout>
+
+## Key Features
+
+Discover the core capabilities that help you own your local market.
+
+<Columns cols={3}>
+  <Card title="Seller's Guides" icon="file-text" href="#sellers-guides">
+    Create professional guides for sellers with pricing insights and market trends.
+  </Card>
+  <Card title="Data Sheets" icon="table" href="#data-sheets">
+    Generate concise data summaries for quick sharing on social media or emails.
+  </Card>
+  <Card title="Market Articles" icon="edit-3" href="#articles">
+    Produce ready-to-publish articles optimized for SEO and client engagement.
+  </Card>
+</Columns>
+
+## Generating Seller's Guides
+
+Seller's guides provide sellers with tailored advice based on live data.
+
+### From the Dashboard
+
+<Tabs>
+  <Tab title="Web Dashboard" icon="monitor">
+    <Steps>
+      <Step title="Enter Postcode" icon="map-pin">
+        Input a UK postcode like `SW1A 1AA`.
+      </Step>
+      <Step title="Select Format" icon="file">
+        Choose seller's guide template.
+      </Step>
+      <Step title="Generate & Download" icon="download">
+        Review preview and export as PDF.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="API Integration" icon="code">
+    <CodeGroup tabs="JavaScript,cURL">
+      ```javascript
+      const response = await fetch('https://api.example.com/v1/reports/sellers-guide', {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+        body: JSON.stringify({ postcode: 'SW1A 1AA' })
+      });
+      const guide = await response.json();
+      ```
+      ```bash
+      curl -X POST https://api.example.com/v1/reports/sellers-guide \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -H "Content-Type: application/json" \
+        -d '{"postcode": "SW1A 1AA"}'
+      ```
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Data Sheets and Articles
+
+Extend your content strategy with versatile formats.
+
+<Columns cols={2}>
+  <Card title="Data Sheets" icon="bar-chart-2">
+    Perfect for social posts. Input postcode and get stats on prices, sales, and trends.
+  </Card>
+  <Card title="Articles" icon="pen-tool">
+    Full-length content for blogs. Auto-generates SEO-friendly market analysis.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Data Sheet Example" icon="table">
+    ```javascript
+    // API response structure
+    {
+      "postcode": "SW1A 1AA",
+      "avgPrice": 1250000,
+      "salesLastMonth": 45,
+      "trend": "up 3.2%"
+    }
+    ```
+  </Tab>
+  <Tab title="Article Customization" icon="edit">
+    Add your branding and logo before publishing.
+  </Tab>
+</Tabs>
+
+## Live UK Property Data Updates
+
+Market Trak pulls from live UK sources, ensuring your reports stay current without manual updates.
+
+<Callout kind="success">
+Data refreshes daily. Always use the latest postcode-specific insights for credibility.
+</Callout>
+
+```mermaid
+graph LR
+    A[Live UK Data] --> B[Market Trak API]
+    B --> C[Your Report]
+    C --> D[Share/Embed]
+```
+
+## Customizing with Local Postcodes
+
+Tailor every report to your patch.
+
+<Steps>
+  <Step title="Validate Postcode" icon="check-circle">
+    Enter valid UK format like `M1 1AA` or `SW1A 1AA`.
+  </Step>
+  <Step title="Preview Data" icon="eye">
+    See live stats before generating.
+  </Step>
+  <Step title="Brand It" icon="palette">
+    Upload logo and set colors (default: #3B82F6).
+  </Step>
+</Steps>
+
+<ParamField path="postcode" param-type="string" required="true">
+  UK postcode in standard format.
+</ParamField>
+
+<ParamField query="format" param-type="string" required="false">
+  Options: `sellers-guide`, `data-sheet`, `article`.
+</ParamField>
+
+## Automating Lead Capture
+
+Embed opt-in forms in reports to capture seller inquiries automatically.
+
+<Expandable title="Embed Code Example" default-open="true">
+  Copy this snippet into your website or email.
+
+  <CodeGroup tabs="HTML,React">
+    ```html
+    <iframe src="https://dashboard.example.com/embed/form?reportId=123" width="100%" height="400"></iframe>
+    ```
+    ```jsx
+    <iframe
+      src={`https://dashboard.example.com/embed/form?reportId=${reportId}`}
+      width="100%"
+      height="400"
+      frameBorder="0"
+    />
+    ```
+  </CodeGroup>
+</Expandable>
+
+<Callout kind="info">
+Forms integrate with your CRM. Track leads from specific postcodes.
+</Callout>
+
+## Best Practices
+
+- Generate weekly reports for consistent content.
+- Share data sheets on social media for quick engagement.
+- Use articles for long-term SEO.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up in minutes.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your API access.
+  </Card>
+</Columns>

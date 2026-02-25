@@ -1,0 +1,103 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements in Market Trak to stay informed about enhancements that boost your market authority and lead generation.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Follow this changelog to discover new report formats, data improvements, and fixes that help you generate better leads from hyper-local UK property insights.
+</Callout>
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added **Seller's Guides** report format with customizable branding and lead capture forms tailored for UK estate agents.
+- Introduced live UK property data integration from multiple sources for always-current market statistics.
+
+## Improvements
+
+- Enhanced social sharing with one-click export to LinkedIn, Facebook, and Twitter, including auto-generated captions.
+- Optimized report generation speed by `>30%` for faster client delivery.
+
+</Update>
+
+<Update label="2024-09-25" description="v1.2.0" tags={["bugfix", "improvement"]}>
+
+## Bug Fixes
+
+- Fixed sharing issues where embedded lead capture forms failed on mobile devices.
+- Resolved lead capture errors during high-traffic periods, ensuring `100%` delivery of contact information.
+
+## Improvements
+
+- Improved Data Sheets layout for better readability on desktop and print.
+- Added preview mode before finalizing reports.
+
+</Update>
+
+<Update label="2024-08-15" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launched **Market Intelligence** reports with competitor analysis and price trend visualizations.
+- Integrated postcode-level data filtering for hyper-local insights.
+
+## Bug Fixes
+
+- Corrected data source sync errors that caused outdated sold prices in reports.
+- Fixed export failures for PDF formats on certain browsers.
+
+</Update>
+
+## Upcoming Features
+
+<Columns cols={3}>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="/docs/analytics">
+    Track report performance and lead conversion rates directly in your dashboard.
+  </Card>
+  <Card title="AI Content Generator" icon="zap" href="/docs/ai-tools">
+    Auto-generate social posts and email campaigns from your market reports.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="/docs/collaboration">
+    Share reports and manage leads with your agency team.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Preview upcoming features in your [dashboard](https://dashboard.marketrak.com/updates). Enable beta access to test new tools early and provide feedback.
+</Callout>
+
+## How to Update
+
+<Steps>
+  <Step title="Check Dashboard" icon="monitor">
+    Log in to your [Market Trak dashboard](https://dashboard.marketrak.com) and navigate to Settings `{>`}` Updates.
+  </Step>
+  <Step title="Enable Auto-Updates" icon="toggle-right">
+    Toggle on automatic updates to receive new features without manual intervention.
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+    Read the release notes in the changelog section and test new reports.
+  </Step>
+</Steps>
+
+<Expandable title="Detailed Migration Guide" default-open="false">
+
+If you're upgrading from v1.0.x, review these changes:
+
+- New API endpoints for report generation: `POST /v1/reports/sellers-guide`
+- Updated webhook payload for lead capture:
+
+````json
+{
+  "lead": {
+    "email": "example@agent.uk",
+    "postcode": "SW1A 1AA",
+    "reportId": "report-uuid"
+  }
+}
+````
+
+</Expandable>
