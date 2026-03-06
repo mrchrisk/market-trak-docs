@@ -57,8 +57,7 @@
         "icon": "code",
         "groups": [
           {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml"
+            "group": "Endpoints"
           }
         ]
       },
@@ -101,6 +100,10 @@
               {
                 "title": "Create Market Report",
                 "path": "help-center/guides/create-market-report"
+              },
+              {
+                "title": "Install the PWA and enable notifications",
+                "path": "help-center/guides/install-pwa-and-notifications"
               }
             ]
           }
@@ -114,9 +117,19 @@
             "title": "Release History",
             "path": "changelog",
             "icon": "history"
+          },
+          {
+            "title": "Recent Updates",
+            "path": "recent-updates",
+            "icon": "git-commit-vertical"
           }
         ]
       }
     ]
-  }
+  },
+  "template": "atlas",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772815985024-mqww036s1al-market-trak-LogoHR.png?q=85&fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772815998939-dtaky99a28i-Market-Trak-Logo-Blue.png?q=85&fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772816010601-7to0y638o0p-Maket-Track-Motif-Blue.png?q=85&fm=auto&auto=compress%2Cformat",
+  "initialRoute": "help-center"
 }
