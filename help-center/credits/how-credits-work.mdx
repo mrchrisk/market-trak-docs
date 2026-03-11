@@ -1,8 +1,9 @@
 ---
 title: How Credits Work
-description: Understand the credit system, how credits are consumed, and how to manage your balance.
+description: >-
+  Understand the credit system, how credits are consumed, and how to manage your
+  balance.
 ---
-
 Market Trak uses a credit system to meter usage of AI-powered features. Each action that uses AI consumes a certain number of credits from your workspace balance.
 
 ## Billing modes
@@ -12,14 +13,19 @@ Your workspace operates in one of two billing modes:
 ### Credits mode
 
 - You receive a **monthly credit allowance** based on your subscription tier
+
 - Credits are deducted as you use features
+
 - Your balance resets at the start of each billing cycle
+
 - You can purchase additional credits if you run out before your reset date
 
 ### Limits mode
 
 - Instead of credits, your plan sets **fixed monthly limits** for specific actions (reports, emails, contacts)
+
 - Usage is tracked against these limits
+
 - Limits reset monthly
 
 Most workspaces use credits mode. Your mode is determined by your subscription tier.
@@ -28,13 +34,15 @@ Most workspaces use credits mode. Your mode is determined by your subscription t
 
 Different actions consume different amounts of credits:
 
-| Action | Credit cost |
-|---|---|
-| **Generate a report** | Varies by report type |
-| **Generate an AI image** | 14 credits |
-| **Property feed post** (auto-generated) | 5 credits |
-| **AI assistant interaction** | Varies by action |
-| **Email campaign** | Included in plan |
+| Action                                  | Credit cost                           |
+| --------------------------------------- | ------------------------------------- |
+| **Generate a report**                   | 20 Credits                            |
+| **Generate an AI image**                | 20 Credits                            |
+| **Re-Generate an AI image**             | 10 Credits                            |
+| **Edit an AI image**                    | 5 Credits                             |
+| **Property feed post** (auto-generated) | 5 Credits                             |
+| **Instant Valuation**                   | 20 Credits                            |
+| **Email campaign**                      | 3 credits for every 10 emails (min 3) |
 
 Credit costs are configured centrally and may be adjusted. The current costs are always reflected in the app when you perform an action.
 
@@ -43,15 +51,16 @@ Credit costs are configured centrally and may be adjusted. The current costs are
 Your current credit balance is visible in two places:
 
 1. **Profile menu** - click your profile icon in the sidebar to see a usage bar showing how much of your monthly allowance you have consumed
+
 2. **Billing page** - detailed breakdown at `/workspace-settings?tab=billing`
 
 The usage bar colour changes as you consume credits:
 
-| Usage | Colour | Meaning |
-|---|---|---|
-| Under 60% | Green | Plenty of credits remaining |
-| 60 - 80% | Orange | Getting low, plan ahead |
-| Over 80% | Red | Running low, consider buying more |
+| Usage     | Colour | Meaning                           |
+| --------- | ------ | --------------------------------- |
+| Under 60% | Green  | Plenty of credits remaining       |
+| 60 - 80%  | Orange | Getting low, plan ahead           |
+| Over 80%  | Red    | Running low, consider buying more |
 
 ## Monthly reset
 
@@ -62,8 +71,11 @@ Your credit balance resets to your plan's full allowance at the start of each bi
 If you run out of credits before your reset date:
 
 1. Click the **Buy Credits** button in your profile menu (appears when balance is low)
+
 2. Choose a credit pack
+
 3. Complete the purchase through Stripe
+
 4. Credits are added to your balance immediately
 
 > **Note:** If you are on a trial, the Buy Credits button will instead direct you to subscribe, since trial users cannot purchase additional credits.
@@ -73,12 +85,18 @@ If you run out of credits before your reset date:
 When your balance drops below approximately 10% of your monthly allowance, you will receive a notification (if enabled in your [notification preferences](/help-center/settings/user-settings)). This gives you time to either:
 
 - Slow down usage until your reset date
+
 - Purchase additional credits
+
 - Upgrade to a higher plan with a larger allowance
 
 ## Credit tips
 
 - **Plan your content calendar** - knowing your monthly credit budget helps you spread usage evenly
+
 - **Use templates** - social media templates and email templates do not cost credits (only AI generation does)
+
 - **Monitor the usage bar** - check it periodically to avoid running out at a critical moment
+
 - **Property feed awareness** - if you have an active property feed, each new listing costs 5 credits for auto-post generation. A busy CRM can consume credits quickly
+
