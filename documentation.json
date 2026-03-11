@@ -180,6 +180,10 @@
                 "path": "help-center/settings/workspace-settings"
               },
               {
+                "title": "Tracking & Analytics",
+                "path": "help-center/settings/tracking-and-analytics"
+              },
+              {
                 "title": "Billing",
                 "path": "help-center/settings/billing"
               }
