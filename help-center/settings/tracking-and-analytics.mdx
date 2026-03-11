@@ -1,0 +1,94 @@
+---
+title: Tracking & Analytics
+description: Add Facebook Pixel, Google Analytics, and Google Tag Manager to your public reports for retargeting and visitor insights.
+---
+
+Market Trak lets you add tracking pixels to all your public report pages. When someone views one of your reports, these pixels fire and send data to your advertising and analytics platforms, enabling retargeting, conversion tracking, and visitor insights.
+
+Tracking is a **premium feature** available on higher-tier plans.
+
+## What you can track
+
+| Pixel | What it does |
+|---|---|
+| **Facebook Pixel** | Track report views as events in Meta Ads Manager. Build retargeting audiences of people who viewed your reports and measure ad conversions |
+| **Google Analytics (GA4)** | See how many people view your reports, where they come from, and how they interact with your pages |
+| **Google Tag Manager** | A container that can load any combination of tracking scripts. Useful if you use multiple analytics or advertising tools |
+
+You only need to add the ones you use. Most agents start with Facebook Pixel and Google Analytics.
+
+## Setting up tracking
+
+1. Go to **Workspace Settings** and expand the **Tracking & Analytics** section
+2. Enter your tracking IDs (see below for where to find them)
+3. Click **Update Tracking Pixels**
+
+Once saved, the pixels are automatically added to every public report your workspace generates.
+
+## Where to find your tracking IDs
+
+### Facebook Pixel ID
+
+Your Pixel ID is a 15-16 digit number.
+
+1. Go to [Meta Events Manager](https://business.facebook.com/events_manager)
+2. Click **Data Sources** in the left sidebar
+3. Select your Pixel (or create one if you have not set one up yet)
+4. Your Pixel ID is displayed at the top of the page
+
+If you do not have a Facebook Pixel yet, click **Connect Data Sources**, choose **Web**, and follow the setup wizard. You do not need to install any code on your website; Market Trak handles the installation on your reports automatically.
+
+### Google Analytics Measurement ID (GA4)
+
+Your Measurement ID looks like `G-XXXXXXXXXX`.
+
+1. Go to [Google Analytics](https://analytics.google.com)
+2. Click the **Admin** cog in the bottom left
+3. Under your property, click **Data Streams**
+4. Click on your web stream (or create one)
+5. Your Measurement ID is shown at the top right
+
+If you do not have a Google Analytics account, you can create one free at [analytics.google.com](https://analytics.google.com). Create a new property for your agency and set up a web data stream.
+
+### Google Tag Manager Container ID
+
+Your Container ID looks like `GTM-XXXXXXX`.
+
+1. Go to [Google Tag Manager](https://tagmanager.google.com)
+2. Your Container ID is shown in the top row of your workspace list
+3. Or click into your container and find it at the top of the page
+
+Google Tag Manager is optional and only needed if you use multiple tracking tools or want advanced tag configurations. If you only need Facebook Pixel and Google Analytics, you can add those directly without GTM.
+
+## Cookie consent (GDPR)
+
+When you have tracking pixels enabled, Market Trak automatically shows a **cookie consent banner** on your public reports. Visitors must accept cookies before any tracking scripts are loaded.
+
+You can configure this in the Tracking & Analytics section:
+
+- **Show Cookie Consent Banner** - toggle on or off (on by default when tracking is active)
+- **Privacy Policy URL** - optionally link to your agency's privacy policy page. If not provided, a generic consent message is shown
+
+Keeping the cookie consent banner enabled is recommended for GDPR compliance, especially if your reports are viewed by visitors in the UK or EU.
+
+## How it works
+
+When a visitor opens one of your public reports:
+
+1. The cookie consent banner appears (if enabled)
+2. If the visitor accepts, your tracking pixels are loaded
+3. Each pixel fires a page view event to its respective platform
+4. You can then see this data in Meta Ads Manager, Google Analytics, or Google Tag Manager
+
+This means you can:
+
+- **Retarget report viewers** with Facebook or Instagram ads
+- **Track which reports get the most views** in Google Analytics
+- **Measure conversions** from report views to valuation requests
+
+## Tips
+
+- You only need to set up tracking once; it applies to all reports automatically
+- If you are running Facebook ads, the Pixel is the most valuable tracking tool to add
+- Google Analytics is useful for understanding traffic patterns even without paid advertising
+- Test your setup by viewing one of your own reports and checking Events Manager or Google Analytics for the page view
