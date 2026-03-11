@@ -1,0 +1,175 @@
+---
+title: Core Features of Market Trak
+description: >-
+  Explore the essential tools in Market Trak for creating market intelligence
+  reports, building social content, and automating lead capture to grow your
+  estate agency.
+---
+## Overview
+
+Market Trak equips UK estate agents with powerful tools to generate hyper-local market reports, customise content for your postcode areas, and capture leads automatically. You create seller's guides, data sheets, and article reports using live UK property data.&#x20;
+
+<Callout kind="tip" collapsed="false">
+  Start with your local postcode to generate reports that position you as the market expert.
+</Callout>
+
+## Key Features
+
+Discover the core capabilities that help you own your local market.
+
+<Columns cols="3">
+  <Card title="Seller's Guides" href="#sellers-guides" icon="file-text" horizontal="false">
+    Create professional guides for sellers with pricing insights and market trends.
+  </Card>
+
+  <Card title="Data Sheets" href="#data-sheets" icon="table" horizontal="false">
+    Generate concise data summaries for quick sharing on social media or emails.
+  </Card>
+
+  <Card title="Market Articles" href="#articles" icon="edit-3" horizontal="false">
+    Produce ready-to-publish articles optimized for SEO and client engagement.
+  </Card>
+</Columns>
+
+## Generating Seller's Guides
+
+Seller's guides provide sellers with tailored advice based on live data.
+
+### From the Dashboard
+
+<Tabs>
+  <Tab title="Web Dashboard" icon="monitor">
+    <Steps>
+      <Step title="Enter Postcode" icon="map-pin" title-type="p">
+        Input a UK (outer) postcode like `SW1A, CM21, N12`.
+      </Step>
+
+      <Step title="Select Format" icon="file" title-type="p">
+        Choose from Seller's Guide, Data Sheet and Article Report templates.
+      </Step>
+
+      <Step title="Generate Report" icon="lucide-cog" title-type="p">
+        Generate your reports, edit and choose your publishing options
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Data Sheets and Articles
+
+Extend your content strategy with versatile formats.
+
+<Columns cols="2">
+  <Card title="Data Sheets" icon="bar-chart-2" horizontal="false">
+    Perfect for social posts. Input postcode and get stats on prices, sales, and trends.
+  </Card>
+
+  <Card title="Articles" icon="pen-tool" horizontal="false">
+    Full-length content for blogs. Auto-generates SEO-friendly market analysis.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Data Sheet Example" icon="table">
+    ```javascript
+    // API response structure
+    {
+      "postcode": "SW1A 1AA",
+      "avgPrice": 1250000,
+      "salesLastMonth": 45,
+      "trend": "up 3.2%"
+    }
+    ```
+  </Tab>
+
+  <Tab title="Article Customization" icon="edit">
+    Add your branding and logo before publishing.
+  </Tab>
+</Tabs>
+
+## Live UK Property Data Updates
+
+Market Trak pulls from live UK sources, ensuring your reports stay current without manual updates.
+
+<Callout kind="success" collapsed="false">
+  Data refreshes daily. Always use the latest postcode-specific insights for credibility.
+</Callout>
+
+```mermaid
+graph LR
+    A[Live UK Data] --> B[Market Trak API]
+    B --> C[Your Report]
+    C --> D[Share/Embed]
+```
+
+## Customizing with Local Postcodes
+
+Tailor every report to your patch.
+
+<Steps>
+  <Step title="Validate Postcode" icon="check-circle" title-type="p">
+    Enter valid UK format like `M1 1AA` or `SW1A 1AA`.
+  </Step>
+
+  <Step title="Preview Data" icon="eye" title-type="p">
+    See live stats before generating.
+  </Step>
+
+  <Step title="Brand It" icon="palette" title-type="p">
+    Upload logo and set colors (default: #3B82F6).
+  </Step>
+</Steps>
+
+<ParamField path="postcode" param-type="string" required="true" deprecated="false">
+  UK postcode in standard format.
+</ParamField>
+
+<ParamField query="format" param-type="string" required="false" deprecated="false">
+  Options: `sellers-guide`, `data-sheet`, `article`.
+</ParamField>
+
+## Automating Lead Capture
+
+Embed opt-in forms in reports to capture seller inquiries automatically.
+
+<Expandable title="Embed Code Example" default-open="true">
+  Copy this snippet into your website or email.
+
+  <CodeGroup show-lines="true" tabs={[]}>
+    ```html
+    <iframe src="https://dashboard.example.com/embed/form?reportId=123" width="100%" height="400"></iframe>
+    ```
+
+    ```jsx
+    <iframe
+      src={`https://dashboard.example.com/embed/form?reportId=${reportId}`}
+      width="100%"
+      height="400"
+      frameBorder="0"
+    />
+    ```
+  </CodeGroup>
+</Expandable>
+
+<Callout kind="info" collapsed="false">
+  Forms integrate with your CRM. Track leads from specific postcodes.
+</Callout>
+
+## Best Practices
+
+- Generate weekly reports for consistent content.
+
+- Share data sheets on social media for quick engagement.
+
+- Use articles for long-term SEO.
+
+<Columns cols="2">
+  <Card title="Quickstart" href="/quickstart" icon="zap" horizontal="false">
+    Set up in minutes.
+  </Card>
+
+  <Card title="Authentication" href="/authentication" icon="shield" horizontal="false">
+    Secure your API access.
+  </Card>
+</Columns>
+
