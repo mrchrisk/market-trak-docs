@@ -78,6 +78,10 @@
             "icon": "share-2",
             "pages": [
               {
+                "title": "Content Strategy Guide",
+                "path": "help-center/social-media/content-strategy"
+              },
+              {
                 "title": "Creating Posts",
                 "path": "help-center/social-media/creating-posts"
               },
