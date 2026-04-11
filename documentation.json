@@ -2,12 +2,12 @@
   "name": "Market Trak",
   "colors": {
     "light": {
-      "brand": "#3B82F6",
+      "brand": "#ec4899",
       "heading": "undefined",
       "text": "undefined"
     },
     "dark": {
-      "brand": "#87B1F6",
+      "brand": "#ec4899",
       "heading": "undefined",
       "text": "undefined"
     }
@@ -227,9 +227,9 @@
     ]
   },
   "template": "atlas",
-  "logo-dark": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772815985024-mqww036s1al-market-trak-LogoHR.png?q=85&fm=auto&auto=compress%2Cformat",
-  "logo-light": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772815998939-dtaky99a28i-Market-Trak-Logo-Blue.png?q=85&fm=auto&auto=compress%2Cformat",
-  "favicon": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1772816010601-7to0y638o0p-Maket-Track-Motif-Blue.png?q=85&fm=auto&auto=compress%2Cformat",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1775920254956-imo6ryln9yd-market-trak-logo.png?fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1775920270698-smsn9cmv3lh-market-trak-logo-dark.png?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1775920295555-t7119v8b5hh-market-trak-favicon-no-bg.png?fm=auto&auto=compress%2Cformat",
   "initialRoute": "help-center",
   "ai": {
     "page-actions": [
