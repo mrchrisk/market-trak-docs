@@ -32,6 +32,10 @@
                 "path": "help-center/getting-started/signing-up"
               },
               {
+                "title": "First Steps",
+                "path": "help-center/getting-started/first-steps"
+              },
+              {
                 "title": "Workspace Setup",
                 "path": "help-center/getting-started/workspace-setup"
               },
@@ -168,6 +172,10 @@
               {
                 "title": "Custom Email Domains",
                 "path": "help-center/integrations/email-domains"
+              },
+              {
+                "title": "Webhooks",
+                "path": "help-center/integrations/webhooks"
               }
             ]
           },

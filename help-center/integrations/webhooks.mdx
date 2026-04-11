@@ -1,0 +1,66 @@
+---
+title: Webhooks
+description: >-
+  Automatically send new lead data to external tools like Zapier, CRMs, or
+  spreadsheets when a lead is captured.
+---
+Webhooks let you automatically forward new lead data to other tools the moment a lead is captured. Instead of manually exporting or checking Market Trak for new leads, the information is sent instantly to wherever you need it.
+
+## What is a webhook?
+
+Think of it as an automatic notification. When someone fills in a lead form on one of your reports or submits an instant valuation, Market Trak sends that lead's details to a URL you specify. The receiving tool (like Zapier, a CRM, or a Google Sheet) then does whatever you have set it up to do — add a row to a spreadsheet, create a contact in your CRM, send you a Slack message, and so on.
+
+## When does it fire?
+
+A webhook is sent every time a new lead is captured in your workspace, including:
+
+- Leads from **locked reports** (when a visitor enters their details to view a report)
+- Leads from **instant valuations** (when someone submits a valuation request)
+
+## Setting up a webhook
+
+1. Go to **Workspace Settings** (click your profile icon in the sidebar)
+2. Scroll to the **Lead Capture** section
+3. Paste your webhook URL into the **Webhooks** field
+4. Save your settings
+
+That is it. Every new lead will now be sent to that URL automatically.
+
+## Using webhooks with Zapier
+
+[Zapier](https://zapier.com) is the most common way to connect Market Trak leads to other tools without any coding. Here is the general idea:
+
+1. Create a new Zap in Zapier
+2. Choose **Webhooks by Zapier** as the trigger
+3. Select **Catch Hook** as the trigger event
+4. Zapier gives you a unique webhook URL — copy it
+5. Paste that URL into Market Trak's webhook field (see above)
+6. Test by capturing a lead in Market Trak (view a locked report or submit a valuation)
+7. Zapier will catch the data. You can then set up an action — for example, adding the lead to a Google Sheet, creating a contact in HubSpot, or sending a notification to Slack
+
+Zapier supports thousands of apps, so you can route your leads almost anywhere.
+
+## Using webhooks with a CRM
+
+If your CRM accepts incoming webhook URLs (many do), you can paste that URL directly into Market Trak's webhook field. This sends new leads straight into your CRM without needing Zapier as a middleman.
+
+Check your CRM's documentation for how to set up an incoming webhook or API endpoint.
+
+<Note>
+Market Trak also has direct integrations with [Loop CRM and Street CRM](/help-center/integrations/crm). If you use either of those, the CRM integration is a better option than webhooks.
+</Note>
+
+## Troubleshooting
+
+If leads are not appearing in your connected tool:
+
+- **Check the URL** — make sure you copied the full webhook URL with no extra spaces
+- **Test with a real lead** — submit a test valuation or view a locked report to trigger the webhook
+- **Check the receiving tool** — make sure your Zap is turned on, or that your CRM endpoint is active and accepting data
+- **Try again** — if you changed the URL, save your workspace settings and capture a new lead to test
+
+## Tips
+
+- You only need one webhook URL. If you want to send leads to multiple places, use Zapier to split the data into several actions within a single Zap
+- Webhooks work alongside all other Market Trak features — your leads still appear in the Leads dashboard as normal
+- If you remove the webhook URL from your settings, leads will stop being forwarded but will still be captured in Market Trak
