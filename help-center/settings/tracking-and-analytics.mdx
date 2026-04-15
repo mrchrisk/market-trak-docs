@@ -86,6 +86,31 @@ This means you can:
 - **Track which reports get the most views** in Google Analytics
 - **Measure conversions** from report views to valuation requests
 
+## Custom Code
+
+For anything that doesn't fit the standard pixel fields above, the **Custom Code** section (just below Tracking & Analytics in Workspace Settings) lets you inject raw HTML or JavaScript into your public reports.
+
+- **Header Code** is injected at the top of the `<head>` section, so it runs before page content loads. Use this for scripts that need to initialise early.
+- **Footer Code** is injected just before the closing `</body>` tag. Use this for scripts that should run after the page has rendered.
+
+Both fields apply to all your public reports and valuation pages automatically.
+
+### When to use custom code
+
+Custom code is useful when you need to add a tool that Market Trak does not have a built-in field for. Common examples:
+
+- **ConvertBox, OptinMonster, or similar pop-up tools**
+- **Hotjar, Microsoft Clarity, or other heatmap and session-recording tools**
+- **Live chat widgets** like Intercom, Crisp, or Tawk.to
+- **Custom tracking pixels** from platforms other than Facebook, Google Analytics, or Google Tag Manager
+- **Small CSS overrides** to tweak the appearance of your reports
+
+### Important notes
+
+- Only paste code from sources you trust. Custom code runs with full access to the report page.
+- If a script breaks the page, remove it and click **Save Changes** again.
+- For standard tracking (Facebook Pixel, GA4, Google Tag Manager, Google Ads), prefer the dedicated fields in the Tracking & Analytics section. They are easier to configure and harder to break.
+
 ## Tips
 
 - You only need to set up tracking once; it applies to all reports automatically
