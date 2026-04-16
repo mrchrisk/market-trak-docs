@@ -60,6 +60,31 @@ When you send an email campaign that includes a report link, Market Trak automat
 
 You do not need to configure anything. UTM parameters are added automatically to all report links in campaign emails.
 
+## Lead sources
+
+When leads arrive from links with UTM parameters or recognisable referrers, Market Trak categorises the traffic source automatically. Two cards appear on the Engagement tab once you have attribution data:
+
+### Lead Sources card
+
+A stacked bar chart showing how many leads came from each source:
+
+- **Paid Google** - Google Ads clicks (detected via GCLID or `utm_medium=cpc` with `utm_source=google`)
+- **Paid Social** - paid ads on Facebook, Instagram, or other social platforms
+- **Paid Microsoft** - Microsoft/Bing Ads clicks
+- **Organic Search** - visitors from Google, Bing, or other search engines (no ad click)
+- **Organic Social** - visitors from social media links (not ads)
+- **Email** - visitors from email campaigns or newsletters
+- **Referral** - visitors from other websites
+- **Direct** - visitors who typed the URL or used a bookmark
+
+### Top Campaigns card
+
+A bar chart showing the five UTM campaigns that have produced the most leads. Useful for comparing which Google Ads campaigns or social media campaigns are converting best.
+
+### How it works
+
+Attribution is captured automatically on instant valuation pages, locked report lead gates, and email signup forms. When someone arrives from a link that includes UTM parameters (like `utm_source=google&utm_medium=cpc&utm_campaign=spring_sellers`), those details are stored against the lead and forwarded in [webhook payloads](/help-center/integrations/webhooks#attribution-data-in-webhooks). You do not need to configure anything.
+
 ## Email open tracking
 
 Email engagement analytics are on a separate tab. Go to **Leads** in the sidebar and click the **Email Engagement** tab to see:

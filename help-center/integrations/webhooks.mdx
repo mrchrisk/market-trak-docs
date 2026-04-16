@@ -59,6 +59,32 @@ If leads are not appearing in your connected tool:
 - **Check the receiving tool**  - make sure your Zap is turned on, or that your CRM endpoint is active and accepting data
 - **Try again**  - if you changed the URL, save your workspace settings and capture a new lead to test
 
+## Attribution data in webhooks
+
+When a lead arrives from a link with UTM parameters (for example, a Google Ads click), Market Trak captures the traffic source and includes it in the webhook payload. This lets your CRM see exactly where each lead came from.
+
+The following fields are included inside `data.lead` on every webhook:
+
+| Field | Example | Description |
+|---|---|---|
+| `traffic_source` | `Paid Google` | Human-readable source category |
+| `utm_source` | `google` | UTM source parameter |
+| `utm_medium` | `cpc` | UTM medium parameter |
+| `utm_campaign` | `spring_sellers` | UTM campaign name |
+| `utm_term` | `property valuation london` | UTM keyword term |
+| `utm_content` | `ad_variant_a` | UTM content variant |
+| `gclid` | `CjwKCAjw...` | Google Ads Click ID |
+| `fbclid` | `IwAR3...` | Facebook Click ID |
+| `msclkid` | `abc123...` | Microsoft Ads Click ID |
+| `referrer` | `https://www.google.com/` | Page that linked to yours |
+| `landing_url` | `https://yoursite.marketrak.pro/valuation?utm_source=google` | Full URL the visitor landed on |
+
+All fields are `null` when no attribution data is available (for example, a direct visit with no UTM parameters). This makes CRM field mapping predictable because the fields are always present.
+
+### Mapping attribution in your CRM
+
+In your CRM workflow (for example, a GoHighLevel inbound webhook or a Zapier action), map the incoming fields to contact custom fields. For Google Ads specifically, mapping `gclid` to your CRM's native Google Click ID field enables offline conversion tracking, so your CRM can report real business outcomes (like won instructions) back to Google Ads.
+
 ## Tips
 
 - You only need one webhook URL. If you want to send leads to multiple places, use Zapier to split the data into several actions within a single Zap
