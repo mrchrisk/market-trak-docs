@@ -1,6 +1,6 @@
 ---
 title: Tracking & Analytics
-description: Add Facebook Pixel, Google Analytics, and Google Tag Manager to your public reports for retargeting and visitor insights.
+description: Add Facebook Pixel, Google Analytics, Google Tag Manager, and Google Ads conversion tracking to your public reports for retargeting and visitor insights.
 ---
 
 Market Trak lets you add tracking pixels to all your public report pages. When someone views one of your reports, these pixels fire and send data to your advertising and analytics platforms, enabling retargeting, conversion tracking, and visitor insights.
@@ -14,8 +14,9 @@ Tracking is a **premium feature** available on higher-tier plans.
 | **Facebook Pixel** | Track report views as events in Meta Ads Manager. Build retargeting audiences of people who viewed your reports and measure ad conversions |
 | **Google Analytics (GA4)** | See how many people view your reports, where they come from, and how they interact with your pages |
 | **Google Tag Manager** | A container that can load any combination of tracking scripts. Useful if you use multiple analytics or advertising tools |
+| **Google Ads** | Track lead conversions from your Google Ads campaigns. Feeds data back into Google Ads so it can optimise your bidding and report cost-per-lead |
 
-You only need to add the ones you use. Most agents start with Facebook Pixel and Google Analytics.
+You only need to add the ones you use. Most agents start with Facebook Pixel and Google Analytics. If you are running Google Ads campaigns, adding your Conversion ID and Label lets Google Ads count actual leads (not just clicks) so it can optimise your spend.
 
 ## Setting up tracking
 
@@ -60,6 +61,20 @@ Your Container ID looks like `GTM-XXXXXXX`.
 
 Google Tag Manager is optional and only needed if you use multiple tracking tools or want advanced tag configurations. If you only need Facebook Pixel and Google Analytics, you can add those directly without GTM.
 
+### Google Ads Conversion ID and Label
+
+Your Conversion ID looks like `AW-XXXXXXXXX` and your Conversion Label is a short string of letters and numbers.
+
+1. Go to [Google Ads](https://ads.google.com)
+2. Click **Goals** in the left sidebar, then **Conversions** and **Summary**
+3. Click the conversion action you want to track (or create a new one, choosing "Website" and "Submit lead form" as the category)
+4. Click **Tag setup**, then **Use Google Tag Manager**
+5. Your **Conversion ID** and **Conversion Label** are displayed on this screen
+
+Enter both values in the Tracking & Analytics section of your Workspace Settings. The Conversion ID goes in the first field and the Conversion Label goes in the second field next to it.
+
+All three lead capture points (instant valuations, locked report unlocks, and email signup forms) fire the same single conversion event, so you only need one conversion action in Google Ads.
+
 ## Cookie consent (GDPR)
 
 When you have tracking pixels enabled, Market Trak automatically shows a **cookie consent banner** on your public reports. Visitors must accept cookies before any tracking scripts are loaded.
@@ -80,11 +95,13 @@ When a visitor opens one of your public reports:
 3. Each pixel fires a page view event to its respective platform
 4. You can then see this data in Meta Ads Manager, Google Analytics, or Google Tag Manager
 
+When a visitor submits a lead form (instant valuation, report unlock, or email signup), conversion events fire to all your connected platforms: Facebook Pixel, Google Analytics, Google Tag Manager, and Google Ads.
+
 This means you can:
 
 - **Retarget report viewers** with Facebook or Instagram ads
 - **Track which reports get the most views** in Google Analytics
-- **Measure conversions** from report views to valuation requests
+- **Measure actual lead conversions in Google Ads** and see your true cost-per-lead, not just cost-per-click
 
 ## Custom Code
 
@@ -115,5 +132,6 @@ Custom code is useful when you need to add a tool that Market Trak does not have
 
 - You only need to set up tracking once; it applies to all reports automatically
 - If you are running Facebook ads, the Pixel is the most valuable tracking tool to add
+- If you are running Google Ads, add your Conversion ID and Label so Google can optimise your bidding based on real leads, not just page views
 - Google Analytics is useful for understanding traffic patterns even without paid advertising
 - Test your setup by viewing one of your own reports and checking Events Manager or Google Analytics for the page view
