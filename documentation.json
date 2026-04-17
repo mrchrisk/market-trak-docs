@@ -122,6 +122,10 @@
               {
                 "title": "Welcome Emails",
                 "path": "help-center/leads/welcome-emails"
+              },
+              {
+                "title": "Email Signup Embeds",
+                "path": "help-center/leads/email-embeds"
               }
             ]
           },
