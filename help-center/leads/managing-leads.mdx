@@ -76,9 +76,9 @@ Click on a lead to see their full profile:
 
 - Engagement data (if they clicked any report links)
 
-## Email verification
+## Lead quality
 
-Leads captured through the lead gate can optionally verify their email address. A verification code is sent to confirm the email is real before the lead sees the full report. This helps maintain a clean lead list.
+Leads from the report lead gate, the email signup form, and the instant valuation tool are captured the moment a visitor submits the form. There is no longer a 6-digit verification code or a "click the link in your email to confirm" step. Junk submissions are filtered behind the scenes with email typo detection ("Did you mean gmail.com?"), an invisible honeypot field that traps bots, and per-IP rate limiting. The webhook to your CRM fires immediately on submit, so you can follow up before the lead's interest goes cold.
 
 ## Unsubscribes
 
