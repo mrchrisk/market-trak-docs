@@ -32,6 +32,10 @@
                 "path": "help-center/getting-started/signing-up"
               },
               {
+                "title": "Your First Welcome Flow",
+                "path": "help-center/getting-started/welcome-flow"
+              },
+              {
                 "title": "First Steps",
                 "path": "help-center/getting-started/first-steps"
               },
