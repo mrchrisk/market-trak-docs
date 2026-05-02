@@ -24,16 +24,6 @@
             "icon": "home"
           },
           {
-            "group": "Magic",
-            "icon": "sparkles",
-            "pages": [
-              {
-                "title": "Magic Packs",
-                "path": "help-center/magic/magic-packs"
-              }
-            ]
-          },
-          {
             "group": "Getting Started",
             "icon": "rocket",
             "pages": [
@@ -162,6 +152,16 @@
               {
                 "title": "Memory and Instructions",
                 "path": "help-center/ai-assistant/memory-and-instructions"
+              }
+            ]
+          },
+          {
+            "group": "Magic",
+            "icon": "sparkles",
+            "pages": [
+              {
+                "title": "Magic Packs",
+                "path": "help-center/magic/magic-packs"
               }
             ]
           },
