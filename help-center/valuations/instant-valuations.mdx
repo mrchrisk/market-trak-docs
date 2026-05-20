@@ -36,19 +36,33 @@ This page requires no authentication, so anyone can access it. You can link to i
 
 ## What data powers the valuation
 
-The instant valuation uses:
+The instant valuation blends three or four independent calculations to produce a single headline figure, drawing on:
 
-- **Average property prices** in the area
+- **An algorithmic model** that values the property based on its size, type, era, and location (property-specific where the UPRN lookup carries data for that exact property, otherwise an area-based model)
 
-- **Price trends** (rising, falling, stable)
+- **Price per square foot** for the property type in the area, multiplied by the property's floor area
 
-- **Comparable sold prices** from Land Registry
+- **The middle price (median) of recent sales** of comparable properties of the same type in the area, compounded forward to today using local price growth
 
-- **Property size data** (floor areas, price per square foot)
+- **The property's previous sale price**, when available, compounded forward by local growth as an extra anchor
 
-- **UPRN lookup** for precise property identification
+The three or four figures are confidence-weighted and combined into the headline. The range under the headline reflects how closely the methods agree, tight when they cluster, wider when they disagree, capped at ±10% so the headline stays a useful single figure.
+
+The Market Snapshot, Recent Sales, and Price History sections of the report use the same underlying data sources:
+
+- **Average asking prices** in the area, filtered to the property type when there's enough data
+
+- **Recent sold prices** from Land Registry, filtered to the property type when there's enough data
+
+- **Price trends** (rising, falling, stable) year-on-year
 
 - **Demand indicators** for the local market
+
+- **Property record** (EPC rating, council tax band, last sale price + date) from UPRN when available
+
+## How we calculated this
+
+The result page includes a quiet "How we calculated this" footer that shows the three or four component figures side-by-side, so a homeowner can see exactly where the headline number came from. Each component shows its raw computed value and a one-line description of where it came from, and the blended headline sits below as the conclusion. It's a transparency feature: it doesn't change the number, it just shows the working.
 
 ## Confirmation emails
 
