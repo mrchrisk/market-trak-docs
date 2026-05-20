@@ -48,7 +48,7 @@ Use the filter bar to narrow your lead list:
 
 - Filter by **source** (report, valuation, import)
 
-- Filter by **email status** (contacted, not contacted, unsubscribed)
+- Filter by **status** (subscribed, unsubscribed, bounced)
 
 - Sort by **date**, **name**, or **location**
 
@@ -89,6 +89,18 @@ Every email sent through Market Trak includes an unsubscribe link. When a lead u
 - They will not receive any future email campaigns
 
 - You can still see their details, but cannot email them
+
+## Bounced emails
+
+Sometimes the email address attached to a lead stops working: the inbox is closed, the domain no longer exists, or the mail server permanently rejects messages from us. When that happens, the lead gets an amber **Bounced** badge on the dashboard and is automatically excluded from every future campaign send.
+
+- Filter by **Bounced** in the status dropdown to see who is affected
+
+- Hover the badge to read the exact reason your mail server gave
+
+- Send Campaign and AI-assistant sends skip these leads automatically, so you do not need to manually deselect them
+
+Soft bounces (full mailboxes, brief outages) are not flagged. Only permanent failures are marked, so a lead with a Bounced badge is genuinely undeliverable rather than just temporarily unreachable.
 
 ## Contact limits
 
