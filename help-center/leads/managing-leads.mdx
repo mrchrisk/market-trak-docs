@@ -78,7 +78,17 @@ Click on a lead to see their full profile:
 
 ## Lead quality
 
-Leads from the report lead gate, the email signup form, and the instant valuation tool are captured the moment a visitor submits the form. There is no longer a 6-digit verification code or a "click the link in your email to confirm" step. Junk submissions are filtered behind the scenes with email typo detection ("Did you mean gmail.com?"), an invisible honeypot field that traps bots, and per-IP rate limiting. The webhook to your CRM fires immediately on submit, so you can follow up before the lead's interest goes cold.
+Leads from the report lead gate, the email signup form, and the instant valuation tool are captured the moment a visitor submits the form. There is no longer a 6-digit verification code or a "click the link in your email to confirm" step. Junk submissions are filtered behind the scenes with:
+
+- **Email typo detection** that prompts "Did you mean gmail.com?" when a common domain is misspelled
+
+- **Disposable email blocking** that rejects throwaway services like Mailinator, Yopmail, Guerrilla Mail, 10minutemail, and around 121,000 other temporary inbox providers. People using a disposable address see a clear message asking them to use a permanent one, so the leads that do reach your dashboard are real
+
+- **Invisible honeypot field** that traps bots
+
+- **Per-IP rate limiting** to slow down brute-force junk submissions
+
+The webhook to your CRM fires immediately on submit, so you can follow up before the lead's interest goes cold.
 
 ## Unsubscribes
 

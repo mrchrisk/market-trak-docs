@@ -66,6 +66,10 @@ Market Trak checks for existing leads by email address. If a lead with the same 
 
 - No duplicate leads are created
 
+## Disposable email filtering
+
+Rows whose email address is on a disposable / temporary mail service (Mailinator, Yopmail, 10minutemail, Guerrilla Mail, and around 121,000 other throwaway providers) are skipped automatically and listed in the import summary so you can see which rows were dropped. The rest of your file imports normally. This keeps your lead list clean without forcing you to scrub the spreadsheet beforehand.
+
 ## Welcome email toggle
 
 During import, you can choose whether to send an automatic welcome email to each imported lead. Toggle this on if you want new imports to receive your workspace's welcome email template.
