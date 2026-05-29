@@ -44,13 +44,19 @@ Each auto-generated post costs **5 credits**.
 
 Market Trak supports three detection methods:
 
-- **Search page** - if you enter a specific search URL (e.g. `youragency.co.uk/properties/for-sale/`), it parses the listing links directly
+- **Search page** - if you enter a specific search URL (e.g. `youragency.co.uk/property-search/` or `youragency.co.uk/properties/for-sale/`), it parses the listing links directly
 
 - **Sitemap** - checks your website's `sitemap.xml` for property URLs
 
 - **HTML scanning** - falls back to scanning common listing page structures
 
-If automatic detection does not find your listings, you can provide a search page URL or an example property URL to help the scanner identify the correct pattern.
+<Callout kind="tip">
+For the most complete feed, enter your **property search page** URL (the page that lists all your properties), not just your homepage. Your homepage usually shows only a handful of featured listings, while the search page covers your whole catalogue.
+</Callout>
+
+Market Trak can also read listings on sites that load their results with JavaScript or that block automated visitors, so most modern agency websites work even when a basic scan would come up empty.
+
+If automatic detection does not find your listings, you can provide a search page URL or an example property URL to help the scanner identify the correct pattern. If a site is locked down so tightly that even this fails, you will see a message that the website is blocking automated access; contact support and we will help get your feed connected.
 
 ### Configuration
 
