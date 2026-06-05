@@ -108,6 +108,16 @@
             ]
           },
           {
+            "group": "Advertising",
+            "icon": "megaphone",
+            "pages": [
+              {
+                "title": "Property Ad Launcher",
+                "path": "help-center/advertising/property-ad-launcher"
+              }
+            ]
+          },
+          {
             "group": "Leads",
             "icon": "users",
             "pages": [
