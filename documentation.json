@@ -182,6 +182,10 @@
               {
                 "title": "Instant Valuations",
                 "path": "help-center/valuations/instant-valuations"
+              },
+              {
+                "title": "Embedding the Valuation Form",
+                "path": "help-center/valuations/embedding-the-valuation-form"
               }
             ]
           },
