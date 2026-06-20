@@ -126,6 +126,10 @@
                 "path": "help-center/leads/managing-leads"
               },
               {
+                "title": "Bio Link",
+                "path": "help-center/leads/bio-link"
+              },
+              {
                 "title": "Email Campaigns",
                 "path": "help-center/leads/email-campaigns"
               },
