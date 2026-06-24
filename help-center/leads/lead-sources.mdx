@@ -93,23 +93,28 @@ Two ways to keep the tracking:
 Put your Market Trak link (with the UTM tags on it) directly in the ad, skipping the in-between page. Nothing is lost.
 </Step>
 <Step title="Keep your landing page: add this snippet" icon="code" titleType="p">
-If you want visitors to land on your own page first, paste this once into that page, just before the closing `</body>` tag. It copies the ad's tags onto any link that points to Market Trak, so the tracking rides through.
+If you want visitors to land on your own page first, add this to that page (the one your ad points to, not Market Trak). Paste it in the **footer**, just before the closing `</body>` tag, or in your website builder's "footer code" or "code injection" slot. It copies the ad's tags onto any link that points to Market Trak, so the tracking rides through.
 </Step>
 </Steps>
 
 ```html
-<!-- Market Trak: carry ad tags onto links to Market Trak -->
+<!-- Market Trak link tracking. Paste before </body>. -->
 <script>
 (function () {
+  // Domains whose links should carry your ad tags. Add a custom domain here later if you ever use one.
+  var HOSTS = ['marketrak.pro'];
   var TRACK = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','msclkid'];
   var here = new URLSearchParams(window.location.search);
   var pass = [];
   TRACK.forEach(function (k) { var v = here.get(k); if (v) pass.push([k, v]); });
   var ref = document.referrer || '';
+  function isTarget(host) {
+    return HOSTS.some(function (h) { return host === h || host.endsWith('.' + h); });
+  }
   function decorate(a) {
     try {
       var url = new URL(a.href, window.location.href);
-      if (!/(^|\.)marketrak\.pro$/i.test(url.hostname)) return;
+      if (!isTarget(url.hostname)) return;
       pass.forEach(function (kv) { if (!url.searchParams.has(kv[0])) url.searchParams.set(kv[0], kv[1]); });
       if (ref && !url.searchParams.has('mt_referrer')) url.searchParams.set('mt_referrer', ref);
       a.href = url.toString();
@@ -122,7 +127,11 @@ If you want visitors to land on your own page first, paste this once into that p
 ```
 
 <Callout kind="info">
-**Using the embedded form instead of a button?** The valuation and signup embeds already do this for you. Just re-copy the latest embed code from your dashboard, and keep the `<script>` part that comes with it.
+Put it on **the page your ad lands on** (the one with the button to Market Trak), in the **footer**. It is not a tracking pixel and sends no data of its own, so it sits alongside your Facebook and Google tags rather than replacing them. If your valuation or report tools ever move to a custom domain, add that domain to the `HOSTS` line.
+</Callout>
+
+<Callout kind="info">
+**Using the embedded form instead of a button?** The valuation and signup embeds already do this for you, on any domain. Just re-copy the latest embed code from your dashboard, and keep the `<script>` part that comes with it.
 </Callout>
 
 ## Channels in your CRM
