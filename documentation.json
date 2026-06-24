@@ -126,6 +126,10 @@
                 "path": "help-center/leads/managing-leads"
               },
               {
+                "title": "Where Your Leads Come From",
+                "path": "help-center/leads/lead-sources"
+              },
+              {
                 "title": "Bio Link",
                 "path": "help-center/leads/bio-link"
               },

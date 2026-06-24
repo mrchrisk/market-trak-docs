@@ -1,0 +1,87 @@
+---
+title: Where your leads come from
+description: >-
+  Understand the channel and traffic source labels on each lead, and learn how
+  to tag your ad and post links so the labels are accurate.
+---
+Every lead Market Trak captures from a public report or instant valuation is labelled with the **channel** it came from, for example "Facebook ad", "Google ad", or "Organic search". You can see this on the lead's record, and it is also sent to your CRM.
+
+## Seeing where a lead came from
+
+Open **Leads** in the sidebar, then click any lead to open its record. The **Where this lead came from** section shows:
+
+- **Channel** - the friendly, specific label, for example "Facebook ad" or "LinkedIn ad"
+
+- **Traffic source** - the broader group it belongs to, for example "Paid Social" or "Organic Search"
+
+- **Campaign** - the campaign name, if you tagged the link with one
+
+- **Captured via** - which Market Trak form captured the lead (report, valuation, manual, etc.)
+
+- **Landing page** and **Referrer** - the page they arrived on and the site they came from, when known
+
+<Callout kind="info">
+The **Source** column on the main Leads table still shows how the lead entered Market Trak (report, valuation, import). The channel is the marketing origin, and it lives on the lead record.
+</Callout>
+
+## What the labels mean
+
+The **channel** is the specific, readable label:
+
+| Channel | What it means |
+|---------|---------------|
+| Google ad | Clicked one of your Google Ads |
+| Microsoft ad | Clicked a Microsoft / Bing ad |
+| Facebook ad, Instagram ad, LinkedIn ad, TikTok ad | Clicked a paid ad on that network |
+| Facebook post, Instagram post, LinkedIn post | Came from an unpaid post on that network |
+| Organic search | Found you on a search engine without clicking an ad |
+| Email | Clicked a link in one of your emails |
+| Referral | Came from another website that links to you |
+| Direct | No trail to follow (typed your address, a bookmark, or an untagged link) |
+| Added manually, Imported | You added them by hand, or via a CSV import |
+
+The **traffic source** is the broader bucket the channel sits in. "Paid" always means a paid ad was clicked, "Organic" means unpaid:
+
+| Traffic source | Meaning |
+|----------------|---------|
+| Paid Google / Paid Microsoft | A paid search ad |
+| Paid Social | A paid ad on a social network (Facebook, Instagram, LinkedIn, TikTok). This is never Google. |
+| Organic Search | An unpaid visit from a search engine |
+| Organic Social | An unpaid social post |
+| Email | A link in an email |
+| Referral | Another website |
+| Direct | No source could be detected |
+
+## Making the labels accurate
+
+The labels are only as good as the links you share. To tell Market Trak where a click came from, add a short **tag** to the end of your links. These tags are called UTM parameters:
+
+- `utm_source` is the platform (for example `facebook`, `linkedin`, `email`)
+
+- `utm_medium` is the type (for example `paid` for ads, `social` for organic posts)
+
+| Where the link is used | Add this to the end of your link |
+|------------------------|----------------------------------|
+| Facebook or Instagram ad | `?utm_source=facebook&utm_medium=paid` |
+| LinkedIn ad | `?utm_source=linkedin&utm_medium=paid` |
+| Organic social post | `?utm_source=facebook&utm_medium=social` |
+| Email link | `?utm_source=email&utm_medium=email` |
+| Google or Microsoft ad | Turn on auto-tagging in Google Ads / Microsoft Ads (no manual tag needed) |
+
+So a tagged Facebook ad link to your valuation page would look like:
+
+```text
+https://marketrak.pro/valuation/your-agency?utm_source=facebook&utm_medium=paid&utm_campaign=spring-valuations
+```
+
+<Callout kind="tip">
+Add `utm_campaign=your-campaign-name` too, and the campaign name shows on the lead record so you can tell which advert or post brought each lead in.
+</Callout>
+
+<Callout kind="alert">
+Without a tag, a Facebook ad click often carries no clear marketing signal, so it can be labelled "Direct" or treated as an organic post. Tagging your ad and post links is what makes the channels reliable. Google and Microsoft ads tag themselves automatically once auto-tagging is on.
+</Callout>
+
+## Channels in your CRM
+
+If you forward leads to a CRM with the lead capture webhook, the data now includes a ready-made `channel` field ("Facebook ad", "Google ad", and so on) alongside the raw `utm_source`, `utm_medium`, and `utm_campaign` values. Map the `channel` field in your CRM to see the same friendly label there.
