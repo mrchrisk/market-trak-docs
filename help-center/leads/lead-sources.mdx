@@ -82,6 +82,49 @@ Add `utm_campaign=your-campaign-name` too, and the campaign name shows on the le
 Without a tag, a Facebook ad click often carries no clear marketing signal, so it can be labelled "Direct" or treated as an organic post. Tagging your ad and post links is what makes the channels reliable. Google and Microsoft ads tag themselves automatically once auto-tagging is on.
 </Callout>
 
+## If your ads go through your own website first
+
+A common setup is: your ad points to a page on **your own website**, and a button there sends people to your Market Trak valuation or report. There is a catch: the ad's tags land on your website's address, and they are not carried across automatically when someone clicks through to Market Trak. Without help, those leads show as "Referral" (from your own site) instead of the real ad.
+
+Two ways to keep the tracking:
+
+<Steps>
+<Step title="Best: point the ad straight at Market Trak" icon="target" titleType="p">
+Put your Market Trak link (with the UTM tags on it) directly in the ad, skipping the in-between page. Nothing is lost.
+</Step>
+<Step title="Keep your landing page: add this snippet" icon="code" titleType="p">
+If you want visitors to land on your own page first, paste this once into that page, just before the closing `</body>` tag. It copies the ad's tags onto any link that points to Market Trak, so the tracking rides through.
+</Step>
+</Steps>
+
+```html
+<!-- Market Trak: carry ad tags onto links to Market Trak -->
+<script>
+(function () {
+  var TRACK = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','msclkid'];
+  var here = new URLSearchParams(window.location.search);
+  var pass = [];
+  TRACK.forEach(function (k) { var v = here.get(k); if (v) pass.push([k, v]); });
+  var ref = document.referrer || '';
+  function decorate(a) {
+    try {
+      var url = new URL(a.href, window.location.href);
+      if (!/(^|\.)marketrak\.pro$/i.test(url.hostname)) return;
+      pass.forEach(function (kv) { if (!url.searchParams.has(kv[0])) url.searchParams.set(kv[0], kv[1]); });
+      if (ref && !url.searchParams.has('mt_referrer')) url.searchParams.set('mt_referrer', ref);
+      a.href = url.toString();
+    } catch (e) {}
+  }
+  function run() { Array.prototype.forEach.call(document.querySelectorAll('a[href]'), decorate); }
+  if (document.readyState !== 'loading') run(); else document.addEventListener('DOMContentLoaded', run);
+})();
+</script>
+```
+
+<Callout kind="info">
+**Using the embedded form instead of a button?** The valuation and signup embeds already do this for you. Just re-copy the latest embed code from your dashboard, and keep the `<script>` part that comes with it.
+</Callout>
+
 ## Channels in your CRM
 
 If you forward leads to a CRM with the lead capture webhook, the data now includes a ready-made `channel` field ("Facebook ad", "Google ad", and so on) alongside the raw `utm_source`, `utm_medium`, and `utm_campaign` values. Map the `channel` field in your CRM to see the same friendly label there.
