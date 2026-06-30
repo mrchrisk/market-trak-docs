@@ -8,11 +8,17 @@ Market Trak tracks every view of your public reports so you can see which conten
 
 ## Accessing engagement data
 
-1. Go to **Reports** in the sidebar
+Go to **Analytics** in the sidebar (under **Measure**). The page opens on an **Overview** tab with your headline numbers, and has three more tabs behind it:
 
-2. Click the **Engagement** tab at the top of the page
+- **Lead Sources** - where your leads come from (channels, campaigns, and how they were captured)
 
-This opens a dashboard with summary statistics, traffic breakdowns, and per-report performance.
+- **Reports** - who is viewing your reports, where the traffic comes from, and your top reports and leads
+
+- **Email** - your campaign open rates and trends
+
+<Callout kind="info">
+Report engagement and email engagement used to live on separate tabs on the Reports and Leads pages. They now live together here on the Analytics page, and old links bring you straight to the right tab.
+</Callout>
 
 <Image src="https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1774283738021-9xppnl9oagp-Enagement-stats.png?q=85&fm=auto&auto=compress%2Cformat" width="1478" height="956" alt="" />
 
@@ -62,32 +68,20 @@ You do not need to configure anything. UTM parameters are added automatically to
 
 ## Lead sources
 
-When leads arrive from links with UTM parameters or recognisable referrers, Market Trak categorises the traffic source automatically. Two cards appear on the Engagement tab once you have attribution data:
+The **Lead Sources** tab gives you a workspace-level view of where your leads come from, once you have attribution data. It groups your leads by:
 
-### Lead Sources card
+- **Channel** - the specific, readable label, for example "Facebook ad", "Google ad", or "Organic search"
+- **Traffic source** - the broader bucket, for example "Paid Social" or "Organic Search"
+- **Top campaigns** - the campaigns that have produced the most leads
+- **Captured via** - which form captured them (report, valuation, manual, import)
 
-A stacked bar chart showing how many leads came from each source:
+It also shows a 14-day trend of new leads. For what each label means and how to tag your ad and post links so the labels stay accurate, see [Where your leads come from](/help-center/leads/lead-sources).
 
-- **Paid Google** - Google Ads clicks (detected via GCLID or `utm_medium=cpc` with `utm_source=google`)
-- **Paid Social** - paid ads on Facebook, Instagram, or other social platforms
-- **Paid Microsoft** - Microsoft/Bing Ads clicks
-- **Organic Search** - visitors from Google, Bing, or other search engines (no ad click)
-- **Organic Social** - visitors from social media links (not ads)
-- **Email** - visitors from email campaigns or newsletters
-- **Referral** - visitors from other websites
-- **Direct** - visitors who typed the URL or used a bookmark
-
-### Top Campaigns card
-
-A bar chart showing the five UTM campaigns that have produced the most leads. Useful for comparing which Google Ads campaigns or social media campaigns are converting best.
-
-### How it works
-
-Attribution is captured automatically on instant valuation pages, locked report lead gates, and email signup forms. When someone arrives from a link that includes UTM parameters (like `utm_source=google&utm_medium=cpc&utm_campaign=spring_sellers`), those details are stored against the lead and forwarded in [webhook payloads](/help-center/integrations/webhooks#attribution-data-in-webhooks). You do not need to configure anything.
+Attribution is captured automatically on instant valuation pages, locked report lead gates, and email signup forms, and forwarded in [webhook payloads](/help-center/integrations/webhooks#attribution-data-in-webhooks). You do not need to configure anything.
 
 ## Email open tracking
 
-Email engagement analytics are on a separate tab. Go to **Leads** in the sidebar and click the **Email Engagement** tab to see:
+Email engagement is on the **Email** tab of the Analytics page. It shows:
 
 - **Total opens** and **unique openers** across all campaigns
 - **Weekly trend** with percentage change
