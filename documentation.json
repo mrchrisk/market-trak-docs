@@ -44,6 +44,10 @@
                 "path": "help-center/getting-started/workspace-setup"
               },
               {
+                "title": "Your Setup Guide",
+                "path": "help-center/getting-started/setup-guide"
+              },
+              {
                 "title": "Navigating the App",
                 "path": "help-center/getting-started/navigating-the-app"
               },
