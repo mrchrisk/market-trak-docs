@@ -58,7 +58,9 @@ For the most complete feed, enter your **property search page** URL (the page th
 
 Market Trak can also read listings on sites that load their results with JavaScript or that block automated visitors, so most modern agency websites work even when a basic scan would come up empty.
 
-If automatic detection does not find your listings, you can provide a search page URL or an example property URL to help the scanner identify the correct pattern. If a site is locked down so tightly that even this fails, you will see a message that the website is blocking automated access; contact support and we will help get your feed connected.
+When the scanner finds listing links, it double-checks a sample of them to make sure they are real property pages rather than search or category pages before saving your feed. On websites with many similar-looking links (for example, a separate page for every "2-bed houses in..." combination) it narrows the feed down to just your listing pages automatically.
+
+If automatic detection does not find your listings, you can provide a search page URL or an example property URL to help the scanner identify the correct pattern; if the scanner could not confidently identify your listings, pasting an example property link is the quickest fix. If a site is locked down so tightly that even this fails, you will see a message that the website is blocking automated access; contact support and we will help get your feed connected.
 
 ### Configuration
 
@@ -103,6 +105,10 @@ All feed-generated posts appear in the [Approval Queue](/help-center/social-medi
 - New listings are detected based on their listed date
 
 - A stale feed cleanup job removes old, unprocessed items periodically
+
+## If your feed stops finding listings
+
+If your website is redesigned or its listing pages move, the feed can stop finding properties. When that happens the feed's card in **Integrations** now shows an error message instead of silently doing nothing. Removing and re-adding the feed re-runs detection against your current website and usually fixes it; contact support if it does not.
 
 ## Tips
 
