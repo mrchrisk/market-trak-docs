@@ -34,7 +34,7 @@ Each auto-generated post costs **5 credits**.
 
 2. Click **Add Feed**
 
-3. Enter your agency website URL (e.g. `https://youragency.co.uk`)
+3. Enter your **property search page** URL, the page that lists all your properties (e.g. `https://youragency.co.uk/property-for-sale`). Just your website address works too; the search page simply gives the scanner the best starting point
 
 4. Market Trak will scan your site and auto-detect your property listings. You'll see each step live as it works, including a running count as it reads your listing pages; larger sites can take a minute or two to scan fully
 
@@ -42,15 +42,13 @@ Each auto-generated post costs **5 credits**.
 
 6. Click **Add Feed** to start monitoring
 
-Market Trak supports four detection methods:
+Market Trak supports three detection methods, tried in this order:
 
 - **Listings feed** - if your website is built on a platform such as Homeflow or Street, Market Trak reads your full property catalogue directly from the platform, with exact addresses, prices and photos and no page scanning at all. This is detected automatically and shown as "Listings Feed" when you add your site
 
-- **Search page** - if you enter a specific search URL (e.g. `youragency.co.uk/property-search/` or `youragency.co.uk/properties/for-sale/`), it parses the listing links directly
+- **Search page** - if you enter a specific search URL (e.g. `youragency.co.uk/property-search/` or `youragency.co.uk/properties/for-sale/`), it parses the listing links directly. Given just a website address, the scanner looks for your search page automatically; this is the preferred method because your search page always shows your current stock
 
-- **Sitemap** - checks your website's `sitemap.xml` for property URLs
-
-- **HTML scanning** - falls back to scanning common listing page structures
+- **Sitemap** - falls back to your website's `sitemap.xml` if no listings page can be found (some websites' sitemaps update infrequently, which is why the search page is preferred)
 
 <Callout kind="tip">
 For the most complete feed, enter your **property search page** URL (the page that lists all your properties), not just your homepage. Your homepage usually shows only a handful of featured listings, while the search page covers your whole catalogue.
