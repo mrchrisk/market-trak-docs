@@ -37,11 +37,14 @@ Check the headline, ad text, and call to action. You can pick from several AI he
 <Step title="Swap the image, edit it, or use a video" icon="image" titleType="p">
 Hover the ad image in the preview to **Replace** it with your own photo or a **video**, or choose **Edit image** to touch it up with the AI image editor. A video plays in the ad on Facebook and Instagram; Market Trak uploads it for you when you launch. Use an MP4 or MOV file.
 </Step>
+<Step title="Add a qualifying question (optional)" icon="list-checks" titleType="p">
+For lead-form ads you can add up to two qualifying questions from a ready-made list, for example "Would you need to sell to buy this property?", "Do you have a property to sell?", or "Would you like a free valuation of your own home?". Tap a question to add it, tap again to remove it. All questions are multiple choice, so the enquirer just taps an answer. See below for how the answers reach you, and for the trade-off to be aware of.
+</Step>
 <Step title="Set your budget" icon="credit-card" titleType="p">
 Choose a daily budget and how many days to run. Market Trak shows the total spend and the date the ad will end. The targeting is automatic (see below), so there's nothing else to configure.
 </Step>
 <Step title="Launch" icon="rocket" titleType="p">
-Confirm and launch. The ad goes live on Facebook and Instagram, and you'll see it under **Your ads**.
+Confirm and launch. The ad goes live on Facebook and Instagram, and you're taken to **Your ads**, where the new ad is at the top of the list.
 </Step>
 </Steps>
 
@@ -57,10 +60,24 @@ There's nothing for you to set here, it's handled automatically.
 
 ## Where your enquiries go
 
-When someone fills in the ad's enquiry form, the lead appears in your [Leads dashboard](/help-center/leads/managing-leads) within moments, tagged as coming from your Facebook ad and attributed to the property it was about. You also get an email notification for every new enquiry, so you can follow up quickly.
+When someone fills in the ad's enquiry form, the lead appears in your [Leads dashboard](/help-center/leads/managing-leads) within moments, tagged as coming from your Facebook ad and attributed to the property it was about. You also get an email notification for every new enquiry, so you can follow up quickly. If you've set up a [lead webhook](/help-center/integrations/webhooks), the enquiry is sent to your CRM or connected tool at the same time.
 
 <Callout kind="tip">
 Speed matters with property enquiries. The email notification means you can respond while the enquiry is still fresh, which is when it's most likely to convert.
+</Callout>
+
+## Qualifying questions
+
+By default the enquiry form asks only for name, email, and phone, which Facebook pre-fills from the person's profile, so enquiring takes a couple of taps and you get the most enquiries.
+
+Adding a qualifying question changes that trade-off deliberately: the enquirer has to answer it themselves, so you'll typically get fewer enquiries, but each one tells you more. A "Yes" to "Would you need to sell to buy this property?" is a buyer with a home to sell, which is a potential instruction as well as a viewing.
+
+- Questions come from a ready-made list and are all **multiple choice**, one tap to answer.
+- You can add **up to two** per ad, and they're **off by default**.
+- The answers appear on the lead's record (under **Enquiry answers**), in the enquiry email, and in your [lead webhook](/help-center/integrations/webhooks) payload, so your CRM can filter on them.
+
+<Callout kind="tip">
+One question is usually the sweet spot. In a busy market, use a question to filter for the enquiries worth calling first; when you want maximum volume, leave them off.
 </Callout>
 
 ## Managing your ads
@@ -68,7 +85,7 @@ Speed matters with property enquiries. The email notification means you can resp
 Open the **Your ads** tab to see every ad you've launched, with its status, daily budget, enquiry count, and spend. For each ad you can:
 
 - **Pause or resume** it at any time.
-- **Change the budget** without relaunching.
+- **Change the budget** without relaunching: tap the daily amount (the "per day" figure with the pencil) on the ad's card.
 - **Extend** an ad that has finished its run, set a new budget and a few more days and the same ad goes live again, keeping its history and enquiries.
 - **End** an ad when you're done. It stops for good but stays in your records for reporting.
 
@@ -119,6 +136,7 @@ The picker on the first screen is your library of properties to advertise:
 - **New listings appear automatically** as your property feed picks them up.
 - **Paste a link** to add any property right away, it's saved so you can reuse it.
 - **Remove a property** with the trash can on its card (for example once it's sold). This only removes it from the launcher, it doesn't affect your social-post feed.
+- **CRM-synced properties have no trash can**: your CRM feed manages them for you, so sold and withdrawn listings drop off automatically and a live listing is always there to advertise.
 
 ## If you're asked to reconnect or allow advertising
 

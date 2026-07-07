@@ -16,6 +16,8 @@ A webhook is sent every time a new lead is captured in your workspace, including
 
 - Leads from **locked reports** (when a visitor enters their details to view a report)
 - Leads from **instant valuations** (when someone submits a valuation request)
+- Leads from **embedded signup forms** on your own website
+- Enquiries from **Facebook and Instagram property ads** launched with the [Property Ad Launcher](/help-center/advertising/property-ad-launcher)
 
 ## Setting up a webhook
 
@@ -84,6 +86,25 @@ All fields are `null` when no attribution data is available (for example, a dire
 ### Mapping attribution in your CRM
 
 In your CRM workflow (for example, a GoHighLevel inbound webhook or a Zapier action), map the incoming fields to contact custom fields. For Google Ads specifically, mapping `gclid` to your CRM's native Google Click ID field enables offline conversion tracking, so your CRM can report real business outcomes (like won instructions) back to Google Ads.
+
+## Facebook ad enquiries in webhooks
+
+Enquiries from your [Property Ad Launcher](/help-center/advertising/property-ad-launcher) ads arrive as the same `lead.captured` event, so any field mapping you already have keeps working. A few details specific to ad enquiries:
+
+- `data.lead.source` is `facebook_ad`, with `channel` set to `Facebook ad` and `traffic_source` to `Paid Social`. The UTM and click ID fields are present but `null`, because the form is filled in on Facebook itself rather than on a web page.
+- The `data.report` block describes the **advertised property** instead of a report: its title reads `Facebook Ad - {address}`, `location` is the property address, `url` is the public listing link, and `property_type`, `bedrooms`, and `price` are included where known.
+- A `data.campaign` block carries the ad's identifiers (including the Facebook campaign, ad, and form IDs) so you can tie enquiries back to a specific ad.
+- If the ad's form included [qualifying questions](/help-center/advertising/property-ad-launcher#qualifying-questions), the answers arrive twice for convenience: `data.answers` is a flat object with stable keys for filtering (for example `"sell_to_buy": "Yes"`), and `data.qualifying_questions` is a list with the full question wording for display.
+
+The question keys are the same on every ad, so a CRM filter like "`sell_to_buy` is Yes" works across all your properties:
+
+| Key | Question |
+|---|---|
+| `sell_to_buy` | Would you need to sell to buy this property? |
+| `property_to_sell` | Do you have a property to sell? |
+| `free_valuation` | Would you like a free valuation of your own home? |
+| `move_timeframe` | How soon are you looking to move? |
+| `buyer_position` | Are you a cash buyer, or will you need a mortgage? |
 
 ## Tips
 
