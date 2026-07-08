@@ -178,16 +178,12 @@
             ]
           },
           {
-            "group": "Packs",
+            "group": "Content Pack",
             "icon": "sparkles",
             "pages": [
               {
                 "title": "Content Packs",
                 "path": "help-center/magic/magic-packs"
-              },
-              {
-                "title": "Property Packs",
-                "path": "help-center/magic/property-packs"
               }
             ]
           },
