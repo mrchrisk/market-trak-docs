@@ -2,73 +2,77 @@
 title: Creating Social Media Posts
 description: >-
   Create professional property marketing posts with AI-generated images and
-  captions.
+  captions, right from your content calendar.
 ---
 Market Trak helps you create scroll-stopping social media content for Facebook and Instagram, complete with AI-generated images and ready-to-publish captions.
 
 ## Ways to create a post
 
-There are four ways to create social media posts:
+- **Content Calendar** - the main way to create a post. Click any day and the post composer opens (see [Creating from the calendar](#creating-from-the-calendar)).
 
-1. **Post Creator** - the dedicated visual editor at `/social-media/create`
+- **AI Assistant** - ask the assistant to create a post for you in chat.
 
-2. **Content Calendar** - click any day on the calendar to create a post directly (see [Creating from the calendar](#creating-from-the-calendar))
+- **Property Feed** - posts are generated automatically from new CRM or website listings, ready for your approval (see [Property Feed](/help-center/social-media/property-feed)).
 
-3. **AI Assistant** - ask the assistant to create a post for you in chat
+## Creating from the calendar
 
-4. **Property Feed** - automatically generated from new CRM listings (see [Property Feed](/help-center/social-media/property-feed))
+1. Click **Content Calendar** in the sidebar.
 
-## Using the Post Creator
+2. Click the **Add Post** button on any day (today or future dates only).
 
-1. Click **Social Posts** in the sidebar
+3. The post composer opens with four ways to start:
 
-2. Click the **Create Post** tab&#x20;
+   - **From a report** - pick one of your saved reports and an image style, and the image and caption are generated from that report's real market data (average prices, trends, demand). Edit anything before saving.
 
-<Image src="https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1774283835208-i8xt200lxr-create-social-post.png?q=85&fm=auto&auto=compress%2Cformat" width="1704" height="805" alt="" />
+   - **About a property** - pick one of your properties (from your connected CRM or website feed) or paste a listing link, then choose between ready-written caption styles (conversational, insight-led, or short and punchy). The post uses the property's photo.
 
-### Selecting a report
+   - **Upload your own** - add a photo or video and write your own caption.
 
-You can optionally link a post to one of your existing reports. This pulls in real market data (average prices, trends, demand) as variables for your caption.
+   - **Write your own** - start from a blank caption, and add media if you want it.
 
-Use the report selector dropdown to choose a report, or click the **X** to clear it and create a post without report data.
+4. Every route ends on the same step: choose your platforms (Facebook, Instagram), then **Save as Draft**, **Schedule for Later** to pick a date and time, or **Publish Now**.
 
-## Using templates
+<Callout kind="tip">
+Not happy with a generated image or caption? Go back a step and pick a different report, image style, property, or caption style; each route generates fresh content.
+</Callout>
 
-Save time with reusable post templates:
+The calendar also lets you click on any existing post to preview it. From the preview panel, you can edit the caption, change media, update platforms, reschedule, or delete the post, all without leaving the calendar view.
+
+## Post preview
+
+As you build a post, the composer shows a live mockup of exactly how it will look in a Facebook or Instagram feed: your image, caption, and branding together, so there are no surprises before you publish.
+
+## Caption templates and variables
+
+Save time with reusable caption templates:
 
 1. Go to the **Templates** tab at `/social-media/templates`
 
 2. Browse or create templates with pre-written captions and variable placeholders
 
-3. When creating a new post, select a template to pre-fill the caption
+3. When you create a post from a report, pick a template (or caption style) to pre-fill the caption
 
-## Post preview
+Templates and report captions can use variables that auto-fill from your report data:
 
-Before publishing or saving, you can preview exactly how your post will look on social media with the mockup preview. This shows your image, caption, and branding as it would appear in a Facebook or Instagram feed.
+| Variable           | What it inserts                         |
+| ------------------ | --------------------------------------- |
+| `{{location}}`     | The property or report location         |
+| `{{averagePrice}}` | Formatted average price (e.g. £456,789) |
+| `{{priceChange}}`  | Price trend with sign (e.g. +5%)        |
+| `{{marketTrend}}`  | Rising, Falling, or Stable              |
+| `{{demandRating}}` | High, Medium, or Low                    |
 
-## Saving and publishing
+## Working with the image
 
-Once your post is ready, you have several options:
+When you create **From a report**, choose the image style from the gallery and the aspect ratio (square, landscape, or portrait) before you generate. The image is tailored to your post's market data and can include property-data overlays.
 
-- **Save as draft** - keep it for later editing
-
-- **Schedule** - set a future date and time for automatic publishing (see <a href="/help-center/social-media/scheduling-and-publishing" target="_blank" rel="noopener noreferrer">Scheduling</a>)
-
-- **Publish now** - send it directly to Facebook and Instagram if connected (see <a href="/help-center/integrations/facebook" target="_blank" rel="noopener noreferrer">Facebook & Instagram Integration</a>)
-
-- **Download** - save the image to your device for manual posting
-
-### Generating an AI image
-
-Click **Generate Image** to create a professional image using AI. The image is tailored to your post content and can include property data overlays.
-
-- You can choose different aspect ratios (square, landscape, portrait)
-
-- If the image is not quite right, generate another one or use the **Edit Image** tool to touch up specific areas
+<Callout kind="tip">
+Want a different image? Go back and pick another style; each style generates a fresh graphic. There is no separate "regenerate" button, choosing a style is how you get a new look.
+</Callout>
 
 ### Edit Image
 
-The image editor lets you paint over specific areas of a generated image (highlighted in magenta), then either erase or edit just those areas:
+Every generated or uploaded image can be refined with the same editor. It lets you paint over specific areas of an image (highlighted in magenta), then either erase or edit just those areas:
 
 1. Click the **Edit Image** button on your image
 
@@ -96,50 +100,10 @@ Open a folder, pick a look, and it's applied to the whole photo. These are the s
 Quick edits apply to the whole photo. To change just one spot, paint over it with the brush and type what you want instead.
 </Callout>
 
-Everything in the Edit Image tool works wherever images appear: the Post Creator, the Approval Queue, your Content Pack, the Property Ad Launcher, the AI Assistant chat, email drafts, and draft posts.
-
-### Writing your caption
-
-Type your caption in the text editor. You can use template variables to auto-fill data:
-
-| Variable           | What it inserts                         |
-| ------------------ | --------------------------------------- |
-| `{{location}}`     | The property or report location         |
-| `{{averagePrice}}` | Formatted average price (e.g. £456,789) |
-| `{{priceChange}}`  | Price trend with sign (e.g. +5%)        |
-| `{{marketTrend}}`  | Rising, Falling, or Stable              |
-| `{{demandRating}}` | High, Medium, or Low                    |
-
-### Editing draft post images
-
-When editing a draft post, click the pencil icon to enter edit mode. You can change the image entirely or use the **Edit Image** tool to make targeted changes to specific areas. The same editing tools are available on scheduled posts in the content calendar.
-
-## Creating from the calendar
-
-You can create posts directly from the content calendar, which is useful for filling gaps in your schedule or posting ad-hoc content like event photos or team updates.
-
-1. Go to **Social Posts** and click the **Calendar** tab
-
-2. Click the **Add Post** button on any day (today or future dates only)
-
-3. The post composer opens with four ways to start:
-
-   - **From a report** - pick one of your saved reports and an image style, and the image and caption are generated from that report's real market data. Edit anything before saving.
-
-   - **About a property** - pick one of your properties (from your connected CRM or website feed) or paste a listing link, then choose between ready-written caption styles (conversational, insight-led, or short and punchy). The post uses the property's photo.
-
-   - **Upload your own** - add a photo or video and write your own caption.
-
-   - **Write your own** - start from a blank caption, and add media if you want it.
-
-4. Every route ends on the same step: choose your platforms (Facebook, Instagram), then **Save as Draft**, **Schedule for Later** to pick a date and time, or **Publish Now**
-
-<Callout kind="tip">
-Not happy with a generated caption? Go back a step and pick a different report, property, or caption style; each route generates fresh content.
-</Callout>
-
-The calendar also lets you click on any existing post to preview it. From the preview panel, you can edit the caption, change media, update platforms, reschedule, or delete the post, all without leaving the calendar view.
+Everything in the Edit Image tool works wherever images appear: the post composer, the Approval Queue, your Content Pack, the Property Ad Launcher, the AI Assistant chat, email drafts, and draft posts.
 
 ## Drafts
 
-Posts you explicitly save are kept in the **Drafts** tab. You can revisit, edit, schedule, or publish any draft. When you publish or schedule a draft, it disappears from the Drafts tab and appears on the calendar instead. Posts are not auto-saved; use the **Save as Draft** button to keep a post for later.
+Posts you explicitly save are kept in the **Drafts** tab. You can revisit, edit, schedule, or publish any draft. When editing a draft, click the pencil icon to enter edit mode; you can change the image entirely or use the **Edit Image** tool for targeted changes. The same editing tools are available on scheduled posts in the calendar.
+
+When you publish or schedule a draft, it disappears from the Drafts tab and appears on the calendar instead. Posts are not auto-saved; use the **Save as Draft** button to keep a post for later.
