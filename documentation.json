@@ -188,6 +188,16 @@
             ]
           },
           {
+            "group": "Property Pack",
+            "icon": "home",
+            "pages": [
+              {
+                "title": "Property Packs",
+                "path": "help-center/magic/property-packs"
+              }
+            ]
+          },
+          {
             "group": "Valuations",
             "icon": "home",
             "pages": [
