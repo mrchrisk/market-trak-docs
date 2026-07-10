@@ -12,7 +12,7 @@ The Property Ad Launcher turns one of your listings into a live Facebook and Ins
 You need three things in place:
 
 - **Facebook and Instagram connected**, with advertising access allowed. See [Facebook & Instagram Integration](/help-center/integrations/facebook). The first time you advertise, you'll be asked to allow advertising access, this is a one-off step that lets Market Trak create the ad on your behalf.
-- **An ad account with a payment method.** The ad runs on your own Meta ad account, so it needs an active card set up in Meta Ads Manager. You choose which ad account to use the first time you connect.
+- **A Business Manager ad account with a payment method.** The ad runs on your own Meta ad account, so it needs an active card set up in Meta Ads Manager. It must be an ad account inside a [Meta Business Manager](https://business.facebook.com/), not the personal ad account Facebook gives every profile: Facebook doesn't let tools like Market Trak run ads on personal accounts. You choose which ad account to use the first time you connect (personal ones are greyed out).
 - **A privacy policy link**, added in your settings. Facebook requires a privacy policy on every lead form, so Market Trak uses your own. Add it under **Workspace Settings**. (Landing-page ads don't need one, only lead forms do.)
 
 <Callout kind="info">
@@ -150,6 +150,26 @@ Facebook uses one connection for both posting and advertising. If you reconnect 
 - The **Reports** and **Your ads** screens show a reconnect banner if your figures can't update.
 
 Click **Allow advertising** (or **Reconnect Facebook**) and approve advertising access, and you'll be brought straight back to carry on. Your enquiries and saved ads are never affected, only the live Facebook figures pause until you reconnect.
+
+## If a launch is blocked
+
+Facebook checks a few things on your account before it lets an ad run. If any are missing, the launch box tells you what to fix and links you straight to the right place. The three most common are one-off setup steps:
+
+<Steps>
+<Step title="Accept Facebook's lead ads terms" icon="file-signature" titleType="p">
+The first time your Page runs a lead ad, Facebook needs a Page admin to accept its Lead Generation Terms of Service. It's a one-time step per Page. The launch box links you to the acceptance page; accept it while logged in as a Page admin, then relaunch.
+</Step>
+<Step title="Add a payment method" icon="credit-card" titleType="p">
+If your ad account has no card set up, the launch box links you straight to that account's billing settings in Meta Ads Manager. Add a payment method there, then relaunch.
+</Step>
+<Step title="Use a Business Manager ad account" icon="building" titleType="p">
+If you connected the personal ad account Facebook gives every profile, ads can't run on it. Go to **Workspace Settings > Integrations > Advertising** and pick an ad account from your [Meta Business Manager](https://business.facebook.com/) instead. If you don't have one yet, you can create an ad account there for free.
+</Step>
+</Steps>
+
+<Callout kind="info">
+Nothing is charged when a launch is blocked, and the ad you built is kept, so you can fix the setting and relaunch without redoing your work.
+</Callout>
 
 ## Not getting enquiries?
 
