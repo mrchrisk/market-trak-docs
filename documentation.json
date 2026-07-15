@@ -40,6 +40,10 @@
                 "path": "help-center/getting-started/first-steps"
               },
               {
+                "title": "Your 14-Day Free Trial",
+                "path": "help-center/getting-started/free-trial"
+              },
+              {
                 "title": "Workspace Setup",
                 "path": "help-center/getting-started/workspace-setup"
               },
