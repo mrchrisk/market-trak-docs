@@ -10,15 +10,17 @@ The Property Feed is one of Market Trak's most powerful features. It monitors yo
 
 ## How it works
 
-1. **Detection** - Market Trak checks your website (or CRM, if connected) every 2 hours for new listings
+1. **Your existing book is read in first** - When you connect a feed, Market Trak catalogues the listings already on your website and reads each one's address, photo, price and details. Your properties start appearing in the property picker within minutes, ready for Property Packs, ads and posts, and the picker shows a live "Building your feed now" count while it works
 
-2. **Generation** - For each new property found, an AI-generated social media post is created automatically (caption and image)
+2. **Detection** - Market Trak then checks your website (or CRM, if connected) every hour for new listings
 
-3. **Review** - Posts land in your [Approval Queue](/help-center/social-media/approval-queue) for review
+3. **Generation** - For each new property found, an AI-generated social media post is created automatically (caption and image)
 
-4. **Publishing** - Approved posts are published to Facebook and Instagram (or you can schedule them)
+4. **Review** - Posts land in your [Approval Queue](/help-center/social-media/approval-queue) for review
 
-Each auto-generated post costs **5 credits**.
+5. **Publishing** - Approved posts are published to Facebook and Instagram (or you can schedule them)
+
+Each auto-generated post costs **5 credits**. Reading in your existing book is free, and no posts are generated for it: those listings simply become available to pick.
 
 ## Setting up the Property Feed
 
@@ -96,11 +98,11 @@ All feed-generated posts appear in the [Approval Queue](/help-center/social-medi
 
 ## Feed timing
 
-- The feed dispatcher runs every **2 hours**
-
-- Each run processes up to **20 feeds** across all workspaces
+- The feed dispatcher runs every **hour**
 
 - New listings are detected based on their listed date
+
+- Your existing book is read in within minutes of connecting; if anything is left over, it fills in on the hourly checks
 
 - A stale feed cleanup job removes old, unprocessed items periodically
 
