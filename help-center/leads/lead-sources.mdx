@@ -109,7 +109,7 @@ If you want visitors to land on your own page first, add this to that page (the 
 (function () {
   // Domains whose links should carry your ad tags. Add a custom domain here later if you ever use one.
   var HOSTS = ['marketrak.pro'];
-  var TRACK = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','msclkid'];
+  var TRACK = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid','msclkid','igsh','igshid','ttclid'];
   var here = new URLSearchParams(window.location.search);
   var pass = [];
   TRACK.forEach(function (k) { var v = here.get(k); if (v) pass.push([k, v]); });
