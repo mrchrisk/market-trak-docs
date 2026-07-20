@@ -76,7 +76,9 @@ In the Integrations page, you can see:
 
 ### Reconnecting
 
-Facebook signs you out periodically for security, so your connection needs reconnecting roughly every two months. If your token has expired, Market Trak will let you know in two places:
+Facebook signs you out periodically for security, so your connection needs reconnecting roughly every two months. Market Trak will let you know in three places:
+
+- **By email.** We email the workspace owner as soon as the connection has expired, or is about to within the next week, with a link straight to the reconnect button. If it is still not reconnected a week later you get one more reminder. This is the one that reaches you without you doing anything, so you do not need to be in the app or wait for a post to fail to find out.
 
 - The Facebook & Instagram section on the **Integrations** page shows a red "Expired" badge and a banner explaining what's happened. There's a **Reconnect** button in that banner.
 
@@ -84,7 +86,25 @@ Facebook signs you out periodically for security, so your connection needs recon
 
 When you reconnect, your connection is refreshed for another ~60 days. The page you previously had connected stays connected; you don't need to re-pick it.
 
-If a post fails to publish because your token expired, the post is not lost: your saved post stays in your Library and your scheduled post stays in the calendar marked as failed, so you can republish it after reconnecting.
+<Callout kind="info">
+One connection covers both networks. Your Instagram account is published through the Facebook Page it's linked to, so when the Facebook connection expires, Instagram posting stops as well and reconnecting Facebook restores both.
+</Callout>
+
+### Republishing a post that failed
+
+If a post failed to publish because your connection had expired, it isn't lost. Your saved post stays in your Library, and your scheduled post stays on the calendar marked in red.
+
+<Steps>
+<Step title="Reconnect Facebook first" icon="refresh-cw" titleType="p">
+Use any of the three routes above. Retrying before you reconnect will just fail again.
+</Step>
+<Step title="Open the failed post" icon="calendar" titleType="p">
+Go to your calendar and click the post. Failed posts are shown in red.
+</Step>
+<Step title="Click Retry Publishing" icon="send" titleType="p">
+The post preview shows a **Retry Publishing** button. The post goes out straight away rather than waiting for its original scheduled time, which has already passed.
+</Step>
+</Steps>
 
 ### Disconnecting
 
