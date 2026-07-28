@@ -50,13 +50,15 @@ The dashboard shows all your leads in a table with:
 
 Use the filter bar to narrow your lead list:
 
-- Filter by **source** (report, valuation, import)
+- Filter by **source** (report, valuation, import). The list always offers every source in your lead database, not just the ones on the page you are looking at
 
 - Filter by **status** (subscribed, unsubscribed, bounced)
 
-- Sort by **date**, **name**, or **location**
+- Sort by **contact name**, **date captured**, or **last interaction**
 
-- Search by **name** or **email**
+- Search by **name**, **email**, or **location**
+
+Filtering and sorting apply to your whole lead database, so paging through the results never changes what is included.
 
 ### Bulk actions
 
@@ -66,7 +68,15 @@ Select multiple leads using the checkboxes, then use Gmail-style bulk actions:
 
 - **Delete** - remove selected leads
 
-- **Export** - download selected leads as CSV
+- **Export** - download the selected leads as CSV, including any you selected on other pages
+
+## Exporting leads
+
+The **Export** button at the top of the page downloads every lead matching your current filters, not just the page on screen. Set your filters first if you want a subset: filter to a single source, for example, and the file contains only those leads.
+
+To export a specific handful instead, tick their checkboxes and use **Export** in the bulk actions bar. Your ticks are remembered as you page through, and "Select all" covers every lead matching your filters.
+
+The file opens cleanly in Excel, Google Sheets and Numbers, and contains each lead's email, name, phone, location, source, capture date, last interaction, and status.
 
 ## The lead record
 
@@ -78,9 +88,9 @@ The record brings together:
 
 - **Areas of interest** - every postcode district (like CM1) the lead has enquired about, shown as small tags. A new area is added automatically whenever they enquire somewhere new, whether that's an ad enquiry, an instant valuation, or a report. You can add an area yourself (type a postcode or district) or remove one, then press **Save changes**. Campaigns use this list: when you [send a campaign](/help-center/leads/email-campaigns) to selected areas, a lead is included if any of their areas matches.
 
-- **At-a-glance counts** - how many instant valuations they have requested, reports they have opened, and emails they have opened.
+- **At-a-glance counts** - how many instant valuations they have requested, reports they have opened, campaign emails you have sent them, and emails they have opened. Sent sits next to opened on purpose, so you can tell at a glance whether a quiet lead has been ignoring you or simply never been emailed.
 
-- **Activity timeline** - everything the lead has done inside Market Trak, newest first: every instant valuation (click one to open its full details), every report they opened, and every email they opened.
+- **Activity timeline** - the full history for that lead, newest first: every instant valuation (click one to open its full details), every report they opened, every campaign email you sent them, every email they opened, and every enquiry from a Facebook ad or your bio link.
 
 <Callout kind="info">
 Report opens only appear when the lead arrived through a tracked link, such as one of your email campaigns. A report opened from a link forwarded privately, for example over WhatsApp, cannot be matched back to the lead. Email opens are matched reliably.
