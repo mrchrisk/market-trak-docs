@@ -104,6 +104,16 @@ This queue system means:
 
 - Failed emails are retried with exponential backoff
 
+## When a lead replies
+
+Campaign emails are sent from Market Trak, but they are set up so that replies come to you, not to us. When someone on your list replies to a market update, it arrives in the inbox on your account, and hitting reply puts you straight back in touch with them.
+
+A small number of mail systems answer automatically rather than sending a real reply, and those answers go to the hidden address email providers use for delivery reports instead of to you. Market Trak now picks those up and forwards them on, so nothing gets lost. Empty automatic responses, such as out-of-office notices with no message in them, are left out, so you only hear about a reply when there is something to read.
+
+<Callout kind="tip">
+If you want replies to go somewhere other than your account email, such as a shared office inbox, set a reply-to address on your custom sending domain in **Settings**.
+</Callout>
+
 ## Campaign tracking
 
 After sending, you can see the campaign status:
