@@ -256,6 +256,10 @@
               {
                 "title": "Billing",
                 "path": "help-center/settings/billing"
+              },
+              {
+                "title": "Your Postcode Areas",
+                "path": "help-center/settings/postcode-areas"
               }
             ]
           },
