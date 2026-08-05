@@ -27,7 +27,7 @@ Open **Leads** in the sidebar, then click any lead to open its record. The **Whe
 <Image src="https://db.marketrak.pro/storage/v1/object/public/broadcast-assets/docs/docs-lead-sources.png" width="1920" height="1080" alt="A lead record showing the Where this lead came from section with channel and captured via, plus areas of interest and activity (contact details blurred)" />
 
 <Callout kind="info">
-The **Source** column on the main Leads table still shows how the lead entered Market Trak (report, valuation, import). The channel is the marketing origin, and it lives on the lead record.
+The **Source** column on the main Leads table shows how the lead entered Market Trak (report, valuation, import). Enquiries from a lead-ad form name the network the form was filled on, so an Instagram enquiry reads "Instagram ad", not "Facebook ad". The channel is the marketing origin, and it lives on the lead record.
 </Callout>
 
 ## What the labels mean
@@ -68,7 +68,8 @@ The labels are only as good as the links you share. To tell Market Trak where a 
 
 | Where the link is used | Add this to the end of your link |
 |------------------------|----------------------------------|
-| Facebook or Instagram ad | `?utm_source=facebook&utm_medium=paid` |
+| Facebook ad | `?utm_source=facebook&utm_medium=paid` |
+| Instagram ad | `?utm_source=instagram&utm_medium=paid` |
 | LinkedIn ad | `?utm_source=linkedin&utm_medium=paid` |
 | Organic social post | `?utm_source=facebook&utm_medium=social` |
 | Email link | `?utm_source=email&utm_medium=email` |
@@ -82,6 +83,10 @@ https://marketrak.pro/valuation/your-agency?utm_source=facebook&utm_medium=paid&
 
 <Callout kind="tip">
 Add `utm_campaign=your-campaign-name` too, and the campaign name shows on the lead record so you can tell which advert or post brought each lead in.
+</Callout>
+
+<Callout kind="info">
+Tag Instagram links with `utm_source=instagram`, not `utm_source=facebook`. The label follows the tag, so an Instagram ad tagged as Facebook reads "Facebook ad" on every lead it brings in. Property ads you launch from Market Trak tag themselves correctly, so this only applies to links you share yourself.
 </Callout>
 
 <Callout kind="alert">
