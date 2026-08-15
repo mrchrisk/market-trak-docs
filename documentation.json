@@ -182,6 +182,16 @@
             ]
           },
           {
+            "group": "Daily Swipes",
+            "icon": "layers",
+            "pages": [
+              {
+                "title": "Daily Swipes",
+                "path": "help-center/magic/daily-swipes"
+              }
+            ]
+          },
+          {
             "group": "Content Pack",
             "icon": "sparkles",
             "pages": [
