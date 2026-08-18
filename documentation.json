@@ -182,11 +182,11 @@
             ]
           },
           {
-            "group": "Daily Swipes",
+            "group": "Swipes",
             "icon": "layers",
             "pages": [
               {
-                "title": "Daily Swipes",
+                "title": "Swipes",
                 "path": "help-center/magic/daily-swipes"
               }
             ]
