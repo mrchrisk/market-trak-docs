@@ -234,6 +234,10 @@
                 "path": "help-center/integrations/facebook"
               },
               {
+                "title": "Google Reviews",
+                "path": "help-center/integrations/google-reviews"
+              },
+              {
                 "title": "CRM integrations",
                 "path": "help-center/integrations/crm"
               },
