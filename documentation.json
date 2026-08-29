@@ -90,6 +90,10 @@
               {
                 "title": "Engagement Tracking",
                 "path": "help-center/reports/engagement-tracking"
+              },
+              {
+                "title": "Your Patch Report",
+                "path": "help-center/reports/your-patch-report"
               }
             ]
           },
