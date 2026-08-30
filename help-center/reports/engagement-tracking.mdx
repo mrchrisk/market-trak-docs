@@ -8,19 +8,23 @@ Market Trak tracks every view of your public reports so you can see which conten
 
 ## Accessing engagement data
 
-Go to **Analytics** in the sidebar (under **Measure**). The page opens on an **Overview** tab with your headline numbers, and has three more tabs behind it:
+Go to **Analytics** in the sidebar (under **Measure**). Everything is one page, built for a quick glance. Pick your period at the top, **7, 30 or 90 days**, and every figure on the page follows it, with the change against the equal period before. The page leads with your new leads for that period and a chart of how they arrived, then your posts published, report views, email opens and Bio link views, then a card for each part of your marketing that has something to show:
 
-- **Lead Sources** - where your leads come from (channels, campaigns, and how they were captured)
+- **How they got here** - how many people saw your reports and Bio link, against how many became a lead
 
-- **Reports** - who is viewing your reports, where the traffic comes from, and your top reports and leads
+- **Every channel** and **Top campaigns** - where those leads came from, with percentages that add up to the headline number
 
-- **Email** - your campaign open rates and trends
+- **Most-read reports** (with the leads each one captured), **Who's reading them** and **Where views come from** - your reports' readership
+
+- **How your emails land** - the campaigns sent in the period, with their open rates
+
+A card with no data simply does not appear, and every card names the period in its top corner. Your [monthly patch report](/help-center/reports/your-patch-report) sits at the top of the page, and the **Your patch** toggle opens it in full.
 
 <Callout kind="info">
-Report engagement and email engagement used to live on separate tabs on the Reports and Leads pages. They now live together here on the Analytics page, and old links bring you straight to the right tab.
+Report engagement and email engagement used to live on separate tabs. They are all one page now, and old links bring you straight to the right card.
 </Callout>
 
-<Image src="https://db.marketrak.pro/storage/v1/object/public/broadcast-assets/docs/docs-engagement-tracking.png" width="1920" height="1080" alt="The Report engagement tab on the Analytics page, with view totals, traffic sources, a 14-day views chart and top reports" />
+<Image src="https://db.marketrak.pro/storage/v1/object/public/broadcast-assets/docs/docs-engagement-tracking.png" width="1920" height="1080" alt="The Analytics page, with view totals, traffic sources, a views chart and top reports" />
 
 ## What is tracked
 
@@ -28,11 +32,9 @@ Report engagement and email engagement used to live on separate tabs on the Repo
 
 Every time someone opens a public report link, a view is logged. You can see:
 
-- **Total views** across all reports
+- **Report views** for your chosen period, with the change against the period before
 
 - **Views per report** to compare performance
-
-- **Views over time** on a timeline chart
 
 ### Traffic sources
 
@@ -72,25 +74,18 @@ You do not need to configure anything. UTM parameters are added automatically to
 
 ## Lead sources
 
-The **Lead Sources** tab gives you a workspace-level view of where your leads come from, once you have attribution data. It groups your leads by:
+The **Every channel** card shows where your period's leads came from, with a percentage for each channel, so the breakdown always adds up to the big number above it (imported leads included, as their own row). **Top campaigns** does the same for the campaigns that produced them, and **How they got here** puts the people who saw your reports and Bio link against the ones who became a lead.
 
-- **Channel** - the specific, readable label, for example "Facebook ad", "Google ad", or "Organic search"
-- **Traffic source** - the broader bucket, for example "Paid Social" or "Organic Search"
-- **Top campaigns** - the campaigns that have produced the most leads
-- **Captured via** - which form captured them (report, valuation, manual, import)
-
-It also shows a 14-day trend of new leads. For what each label means and how to tag your ad and post links so the labels stay accurate, see [Where your leads come from](/help-center/leads/lead-sources).
+For what each channel label means and how to tag your ad and post links so the labels stay accurate, see [Where your leads come from](/help-center/leads/lead-sources).
 
 Attribution is captured automatically on instant valuation pages, locked report lead gates, and email signup forms, and forwarded in [webhook payloads](/help-center/integrations/webhooks#attribution-data-in-webhooks). You do not need to configure anything.
 
 ## Email open tracking
 
-Email engagement is on the **Email** tab of the Analytics page. It shows:
+Email engagement is the **How your emails land** card on the Analytics page. It shows:
 
-- **Total opens** and **unique openers** across all campaigns
-- **Weekly trend** with percentage change
-- **14-day timeline chart** of daily email opens
-- **Per-campaign open rates** with colour-coded badges (green for 30%+, amber for 15%+, red below)
+- **Email opens** for your chosen period, with the blended open rate of the campaigns sent in it
+- **Each campaign** with its recipients, when it went, its opens and its open rate, strongest rates highlighted
 
 Email open tracking is automatic. Every campaign email includes a tracking pixel that records when a lead opens the email.
 
