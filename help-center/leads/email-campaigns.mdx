@@ -145,14 +145,17 @@ After sending, you can see the campaign status:
 | **Completed**        | All emails sent successfully                |
 | **Partially Failed** | Some emails failed (e.g. bounced addresses) |
 
-## Email open tracking
+## Open and click tracking
 
-Every campaign email includes a tracking pixel that records when a lead opens the email. You do not need to configure anything; it is automatic.
+Every campaign email includes a tracking pixel that records when a lead opens the email, and every link in it records when it is clicked before sending the reader straight on to where the link goes. You do not need to configure anything; both are automatic, your links behave exactly as before, and unsubscribe links are never tracked.
+
+Clicks are worth watching more than opens. Some mail apps open the tracking pixel on the lead's behalf, and others block it, so open counts are always a little blurred; a click is a real person choosing to look at what you sent.
 
 To see your email engagement data, go to **Analytics** under **Measure** in the sidebar and find the **How your emails land** card. You will see:
 
-- **Email opens** over the last 30 days, with your blended open rate
+- **Email opens** for the period you pick at the top of the page, with your blended open rate
 - **Each campaign** with its recipients, when it went, its opens and its open rate, strongest rates highlighted
+- **Clicks** under each campaign's opens, once it has some (campaigns sent before click tracking arrived on 30 August 2026 have none to show)
 
 Each campaign is listed by the subject line your recipients actually saw, with any placeholders filled in, so a campaign built from `{{location}} Market Update - {{current_date}}` appears as "KA7 Market Update - July".
 

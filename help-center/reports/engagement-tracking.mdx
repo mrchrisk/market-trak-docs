@@ -16,7 +16,9 @@ Go to **Analytics** in the sidebar (under **Measure**). Everything is one page, 
 
 - **Most-read reports** (with the leads each one captured), **Who's reading them** and **Where views come from** - your reports' readership
 
-- **How your emails land** - the campaigns sent in the period, with their open rates
+- **How your emails land** - the campaigns sent in the period, with their opens, clicks and open rates
+
+- **Your ads** - spend, enquiries, cost per enquiry and clicks for your [property ads](/help-center/advertising/property-ad-launcher), shown only if you run them
 
 A card with no data simply does not appear, and every card names the period in its top corner. Your [monthly patch report](/help-center/reports/your-patch-report) sits at the top of the page, and the **Your patch** toggle opens it in full.
 
@@ -80,14 +82,19 @@ For what each channel label means and how to tag your ad and post links so the l
 
 Attribution is captured automatically on instant valuation pages, locked report lead gates, and email signup forms, and forwarded in [webhook payloads](/help-center/integrations/webhooks#attribution-data-in-webhooks). You do not need to configure anything.
 
-## Email open tracking
+## Email opens and clicks
 
 Email engagement is the **How your emails land** card on the Analytics page. It shows:
 
 - **Email opens** for your chosen period, with the blended open rate of the campaigns sent in it
 - **Each campaign** with its recipients, when it went, its opens and its open rate, strongest rates highlighted
+- **Clicks** under each campaign's opens, once it has some
 
-Email open tracking is automatic. Every campaign email includes a tracking pixel that records when a lead opens the email.
+Both are automatic. Every campaign email includes a tracking pixel that records opens, and every link records when it is clicked before sending the reader straight on to the page. Clicks are worth watching more than opens: some mail apps open the pixel on the lead's behalf or block it entirely, but a click is a real person choosing to look. Campaigns sent before click tracking arrived (30 August 2026) have no clicks to show, so no clicks line appears on them.
+
+## Your ads
+
+If you run [property ads](/help-center/advertising/property-ad-launcher), the **Your ads** card shows their spend, enquiries, cost per enquiry and clicks for your chosen period, with a link through to the full ad report. If you have never launched an ad, there is no card.
 
 ## Using engagement data
 
