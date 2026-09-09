@@ -1,12 +1,11 @@
 ---
 title: Memory and Custom Instructions
 description: >-
-  Personalise the AI Assistant with custom instructions and let it learn from
-  your conversations.
+  Set workspace content instructions for captions, packs and images, and manage
+  the preferences learned from your conversations.
 ---
-The AI Assistant gets smarter the more you use it. It has two systems that make it feel like working with a colleague who knows your preferences: **auto-learning memory** and **custom instructions**.
+Use **Workspace instructions** to set shared rules for your generated content. The Assistant also learns preferences from conversations. Explicit instructions take priority over learned preferences and default wording.
 
-<Image src="https://blob-cdn.documentation.ai/org-60a9d1e7-de11-4a54-9530-1c742f9a03b9/doc-db1aaa2f-b483-467d-95b5-4501879b6003/1774284968066-5o6fy5w7spy-Memory-Settings.png?q=85&fm=auto&auto=compress%2Cformat" width="913" height="554" alt="" />
 
 ## Auto-learning memory
 
@@ -57,7 +56,11 @@ You can explicitly tell the assistant to remember a preference by saying things 
 
 ### Privacy
 
-- Memories are scoped to your individual profile, not shared across team members
+- Conversation summaries remain personal to you within the workspace. They are not copied into pack or image prompts.
+
+- Confirmed creative preferences can guide generated content across the workspace. Personal details, recipient preferences and one-off requests are excluded.
+
+- Workspace instructions are visible to your team. The workspace owner or a platform admin manages them.
 
 - They are stored securely in your workspace database
 
@@ -65,15 +68,19 @@ You can explicitly tell the assistant to remember a preference by saying things 
 
 ## Custom instructions
 
-Custom instructions let you tell the assistant how you want it to behave. Think of it as a permanent briefing that applies to every conversation.
+Workspace instructions guide Assistant writing, Content Packs, Property Packs, Swipes, property-feed posts, calendar captions, property-ad copy and AI images. They also apply when content is generated on a schedule.
+
+For example: **Use only postcode districts in captions and image text, rather than town names.** Where a relevant postcode is known, generated image labels use it. Report data, factual property details and working URLs are preserved.
+
+Instructions apply to new generation and requested edits. Existing posts, images and reports are not rewritten automatically. Reports keep their original data and place names.
 
 ### Setting custom instructions
 
 1. Open **Assistant memory** (click your profile icon in the sidebar, or tap your initials on a phone and look under **Account**)
 
-2. Turn on **Your instructions**
+2. As the workspace owner, turn on **Workspace instructions**
 
-3. Write what you want the assistant to always know about you. If you are not sure where to start, tap **What should I write?** for some examples
+3. Write the creative rules your workspace should follow. If you are not sure where to start, tap **What should I write?** for some examples
 
 4. Save
 
@@ -112,7 +119,7 @@ Good custom instructions might cover:
 
 - The assistant will not extract or store new memories
 
-- Existing memories are preserved but not used
+- Your existing conversation memories are preserved but do not contribute to new content
 
-- The assistant still works, just without personalisation context
+- Workspace instructions, enabled creative preferences from other members and rules learned from content feedback remain separate
 
