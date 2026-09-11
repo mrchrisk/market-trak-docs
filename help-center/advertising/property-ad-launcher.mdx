@@ -196,28 +196,30 @@ Nothing is charged when a launch is blocked, and the ad you built is kept, so yo
 
 ### If Facebook asks you to authenticate your account
 
-Occasionally Facebook decides someone may have tried to get into your account and freezes new ads until you confirm it's you. The message reads *"Please authenticate your account"*, and it stops you creating or changing ads. Any ads already running carry on as normal.
+Occasionally a launch is refused with *"We think someone may have tried to access your account without permission"*. Despite the wording, this is **not** a real restriction on your account, and you have not done anything wrong.
 
-This is a Facebook security check, so it can only be cleared on Facebook:
+It is a known fault on Meta's side that affects tools connecting through their advertising API. The giveaway is that you can still create ads by hand in Ads Manager perfectly normally. Only the connection is refused.
+
+The prompt Facebook wants you to complete is real, but it stays hidden until you try to publish something in Ads Manager yourself. That is why the page looks completely normal when you go and check.
 
 <Steps>
-<Step title="Open Ads Manager on a computer" icon="monitor" titleType="p">
-Go to [Ads Manager](https://adsmanager.facebook.com/) signed in as the Facebook profile you connected to Market Trak. Market Trak names that profile for you in the message, so check it matches the account you are signed in as. The check often won't appear in the phone app, so use a desktop browser.
+<Step title="Open Ads Manager in a private window" icon="monitor" titleType="p">
+Go to [Ads Manager](https://adsmanager.facebook.com/) in a private browsing window, signed in as the Facebook profile you connected to Market Trak. Market Trak names that profile in the message, so check it matches.
 </Step>
-<Step title="Follow the prompt at the top of the page" icon="shield-check" titleType="p">
-Facebook will walk you through confirming your identity. It usually asks you to review recent logins and confirm a code sent to your email or mobile.
+<Step title="Edit any ad's name and press Publish" icon="pencil" titleType="p">
+This is the step that makes the prompt appear. Change an ad's name to anything, publish it, and stay on the page. Facebook will then show you the authentication it wanted, usually reviewing recent logins and confirming a code.
 </Step>
-<Step title="Relaunch from Market Trak" icon="rotate-ccw" titleType="p">
-Once Facebook clears the check, come back and launch the ad again. Nothing was charged for the blocked attempts.
+<Step title="Reconnect Facebook, then relaunch" icon="rotate-ccw" titleType="p">
+Once you have completed it, go to **Workspace Settings > Integrations** and reconnect Facebook so Market Trak picks up the cleared status. Then launch again. Nothing was charged for the blocked attempts.
 </Step>
 </Steps>
 
-<Callout kind="alert">
-It has to be the exact account Market Trak names. If you have a personal Facebook login and a work one, verifying the wrong profile will not lift the block, even if Facebook confirms your identity on it.
+<Callout kind="info">
+If that does not clear it, two things are worth trying: have another admin on the same Business Manager connect Market Trak instead, or change your Facebook password, which resets the connection, and then reconnect.
 </Callout>
 
 <Callout kind="alert">
-If Facebook makes you change your password as part of this, your Market Trak connection stops working. Go to **Workspace Settings > Integrations** and reconnect Facebook before you relaunch.
+You do not need to verify your identity with a passport or photo ID to fix this. If Facebook offers that, it is not what is blocking your ads.
 </Callout>
 
 ## Not getting enquiries?
