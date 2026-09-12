@@ -198,12 +198,35 @@ Nothing is charged when a launch is blocked, and the ad you built is kept, so yo
 
 Occasionally a launch is refused with *"Please authenticate your account. We think someone may have tried to access your account without permission."*
 
-When this happens, the launch box shows you Facebook's message word for word. We deliberately do not paraphrase it or add our own explanation, because Facebook is the only one who can tell you what it wants.
+The launch box shows you Facebook's message word for word. We don't paraphrase it, because Facebook is the only one who can tell you what it wants. Alongside it you'll see Facebook's own error code and trace ID, which is what Meta support asks for if it comes to that.
 
-What we can tell you is what happens on our side. We stop before anything goes live, nothing is charged, and the ad you built is saved so you can relaunch once it is resolved. Ads already running are not affected.
+On our side: we stop before anything goes live, nothing is charged, and the ad you built is saved so you can relaunch. Ads already running are not affected.
+
+### Clearing it
+
+Facebook hides the authentication behind a **Start Authentication** button that most people never find, because it isn't on the page the error sends you to. It's usually in one of two places.
+
+<Steps>
+<Step title="Look under Billing and Payments" icon="credit-card" titleType="p">
+Go to [Ads Manager](https://business.facebook.com/adsmanager) on a desktop browser and open **Billing and Payments**. If a **Start Authentication** button is there, that is the one.
+</Step>
+<Step title="Or open any ad" icon="pencil" titleType="p">
+In Ads Manager, open one of your ads and look at the top right for the same **Start Authentication** button. Editing an ad and trying to publish can also bring the authentication card up.
+</Step>
+<Step title="Verify by code" icon="shield-check" titleType="p">
+Facebook sends a code to your email or mobile. Enter it. This is an email or SMS code, not an identity check.
+</Step>
+<Step title="Wait five minutes, then reconnect" icon="rotate-ccw" titleType="p">
+Give Facebook about five minutes to register it. Then go to **Workspace Settings > Integrations** and reconnect Facebook, so Market Trak picks up a fresh connection. Then relaunch.
+</Step>
+</Steps>
 
 <Callout kind="alert">
-Facebook's message asks you to authenticate in Ads Manager. If you go there and find nothing to complete, **please contact us rather than taking further steps on your own.** We have seen this error where no prompt appears in Ads Manager at all, and where identity verification did not resolve it. Get in touch and we will look at your account with you.
+**You do not need to send Facebook a passport or photo ID for this.** If Facebook offers identity verification, that is a different process and will not clear this error. One agent completed it in full and stayed blocked.
+</Callout>
+
+<Callout kind="info">
+These steps are not published by Meta. They are what has worked for advertisers using tools like ours, so treat them as the best first thing to try rather than a guaranteed fix. **If you cannot find the Start Authentication button anywhere, or you complete it and the launch is still refused, contact us.** Send us the error code and trace ID from the launch box and we will take it from there.
 </Callout>
 
 ## Not getting enquiries?
