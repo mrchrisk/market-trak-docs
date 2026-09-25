@@ -113,6 +113,35 @@ This means you can:
 - **Track which reports get the most views** in Google Analytics
 - **Measure actual lead conversions in Google Ads** and see your true cost-per-lead, not just cost-per-click
 
+## Every lead reaches your Facebook Pixel
+
+The Facebook Pixel runs in your visitor's browser, so it misses some leads: people on iPhones, people with ad blockers, people browsing inside the Facebook app, and anyone who declines cookies. Those leads still reach you in Market Trak, but your Facebook ads never get the credit for them.
+
+So Market Trak also sends each lead to your Facebook Pixel from our side. Facebook counts each lead once, not twice, even when both the browser and Market Trak report it. This covers instant valuations on your valuation page, report unlocks and your signup forms.
+
+To turn it on:
+
+<Steps>
+<Step title="Add your Facebook Pixel ID" icon="settings" titleType="p">
+Enter it in the **Tracking & Analytics** section, as described above.
+</Step>
+<Step title="Allow advertising" icon="megaphone" titleType="p">
+Go to **Workspace Settings**, open **Integrations**, and tap **Allow advertising** on the Advertising card. If the card already shows your ad account, there is nothing to do.
+</Step>
+</Steps>
+
+Your lead forms show a short line telling visitors you may share their details with advertising and analytics partners, such as Meta and Google.
+
+<Callout kind="info">
+If you use the instant valuation form embedded on your own website, that form still reports leads from your website's own pixel only.
+</Callout>
+
+### Facebook shows fewer leads than Market Trak
+
+- **Check Traffic permissions.** In Meta Events Manager, open your Pixel's **Settings** and look at **Traffic permissions**. If you only allow certain websites, add **mtrak.me**, which is where your valuation page and reports are hosted. Otherwise Facebook ignores what your Pixel sees there.
+- **Check you have allowed advertising** under **Workspace Settings > Integrations**. If your Facebook connection has expired, reconnect it there.
+- **Give it a day.** Ads Manager can take a few hours to show new leads, and counts them against the day of the ad click.
+
 ## Custom Code
 
 For anything that doesn't fit the standard pixel fields above, the **Custom Code** section (just below Tracking & Analytics in Workspace Settings) lets you inject raw HTML or JavaScript into your public reports.
