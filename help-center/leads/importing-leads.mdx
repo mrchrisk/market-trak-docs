@@ -1,6 +1,6 @@
 ---
 title: Importing Leads
-description: Bulk import leads from a CSV file with field mapping and duplicate detection.
+description: Bulk import leads from a CSV or Excel file, with field mapping and duplicates skipped.
 ---
 If you have existing leads in a spreadsheet, you can import them into Market Trak in bulk. The import accepts CSV and Excel (.xlsx or .xls) files.\
 \
@@ -20,17 +20,19 @@ If you have existing leads in a spreadsheet, you can import them into Market Tra
 
 5. Review the import preview
 
-6. Click **Import**
+6. Tick the consent box (see below)
+
+7. Click **Import**, which shows how many leads it will add, for example **Import 120 Leads**
 
 ## CSV format
 
 Your CSV file should include at minimum:
 
-- **Email address** (required, used for deduplication)
+- **Email address** (required, used to spot duplicates)
 
 - **Name** (recommended)
 
-- **Location** (optional)
+- **Location** (optional, but include a postcode: see [Locations and areas](#locations-and-areas))
 
 - **Phone** (optional)
 
@@ -38,53 +40,41 @@ The first row should be column headers. Example:
 
 ```csv
 Name,Email,Location,Phone
-Sarah Johnson,sarah@example.com,Didsbury,07700900000
-James Wilson,james@example.com,Chorlton,07700900001
+Sarah Johnson,sarah@example.com,M21 8AB,07700900000
+James Wilson,james@example.com,Didsbury M21,07700900001
 ```
 
 ## Field mapping
 
-After uploading, you will see a mapping screen where you match your CSV columns to Market Trak fields:
+After uploading, you will see a mapping screen where you match your CSV columns to Market Trak fields. Each column can be set to **Email**, **Full name**, **First name**, **Last name**, **Phone**, **Location** or **Ignore**.
 
-- **Name** - maps to the lead's full name
+If your column headers use the usual names (such as "Email", "Name", "Surname", "Mobile" or "Postcode"), mapping happens automatically. Otherwise, use the drop-downs to assign each column. At least one column must be mapped to **Email** before you can import.
 
-- **Email** - maps to the lead's email address
+## Duplicates
 
-- **Location** - maps to the lead's location/area
-
-- **Phone** - maps to the lead's phone number
-
-If your column headers match the expected names, mapping happens automatically. Otherwise, use the dropdowns to assign each column.
-
-## Duplicate detection
-
-Market Trak checks for existing leads by email address. If a lead with the same email already exists in your workspace:
-
-- The duplicate is flagged during the preview step
-
-- You can choose to skip duplicates or update existing records
-
-- No duplicate leads are created
+Market Trak checks every row's email address. A row is skipped if its email is already a lead in your workspace, or appears earlier in the same file. The mapping screen and the preview both say how many duplicates will be skipped. Existing leads are never changed or duplicated.
 
 ## Disposable email filtering
 
-Rows whose email address is on a disposable / temporary mail service (Mailinator, Yopmail, 10minutemail, Guerrilla Mail, and around 121,000 other throwaway providers) are skipped automatically and listed in the import summary so you can see which rows were dropped. The rest of your file imports normally. This keeps your lead list clean without forcing you to scrub the spreadsheet beforehand.
+Rows whose email address is on a disposable / temporary mail service (Mailinator, Yopmail, 10minutemail, Guerrilla Mail, and around 121,000 other throwaway providers) are skipped automatically and counted in the rows skipped when the import finishes. The rest of your file imports normally. This keeps your lead list clean without forcing you to scrub the spreadsheet beforehand.
 
-## Welcome email toggle
+## The consent box
 
-During import, you can choose whether to send an automatic welcome email to each imported lead. Toggle this on if you want new imports to receive your workspace's welcome email template.
+Before you can import, you must tick the box confirming that everyone in the file has agreed to hear from you, that you have contacted them within the past year, and that the list is not from a third party. The **Import** button stays off until it is ticked.
 
-> **Note:** Only toggle welcome emails on for leads who expect to hear from you. Sending unsolicited emails can damage your sender reputation.
+## No welcome email
 
-## Contact limit enforcement
+Imported leads are not sent a welcome email. They go straight into your leads, ready for you to email when you choose.
 
-The import respects your plan's contact limit. If importing would exceed your limit:
+## Contact limits
 
-- You are warned before the import starts
+The import respects your plan's contact limit. If importing would take you over it, nothing is imported: pressing **Import** shows a message with how many leads you are importing, your limit and how many contacts you have now, and the **Import** button is turned off. To go ahead, choose a smaller file, or upgrade your plan to increase your limit.
 
-- You can choose to import up to your limit
+## Locations and areas
 
-- Or upgrade your plan to increase capacity
+A lead's areas come from the postcode in their location. A location with a postcode or a postcode district, such as "M21 8AB" or "Didsbury M21", gives the lead that area.
+
+A location that is only a town name, such as "Didsbury", gives the lead no area. That lead won't get emails you send to your areas until it has one. You can add an area on the lead's record, under **Areas of interest** (see [Managing Leads](/help-center/leads/managing-leads#the-lead-record)).
 
 ## After importing
 
@@ -92,7 +82,7 @@ Imported leads appear in your lead dashboard immediately. You can:
 
 - Filter by source to see just your imported leads
 
-- Send them an email campaign
+- Email them from the [Emails page](/help-center/leads/email-campaigns)
 
 - View their details and engagement
 
@@ -100,7 +90,7 @@ Imported leads appear in your lead dashboard immediately. You can:
 
 - Clean your CSV before importing, remove blank rows, fix formatting issues, and validate email addresses
 
-- Use consistent location names (e.g. always "Didsbury" not sometimes "Didsbury, Manchester")
+- Include a postcode in each location (e.g. "Didsbury M21" rather than just "Didsbury"), so every lead gets its area
 
 - Start with a small test import to verify your field mapping before uploading a large file
 

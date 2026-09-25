@@ -6,15 +6,15 @@ Welcome emails are sent automatically when a new lead is captured in your worksp
 
 ## How it works
 
-When a lead enters your workspace (from a report lead gate, valuation form, or manual entry), Market Trak can automatically send them a welcome email. This happens:
+The welcome email goes out the moment a lead signs up, for leads captured through a public report unlock, an email signup form or an embed signup. Submission and welcome email happen in a single step.
 
-1. **On lead creation** - for manually added leads or CSV imports (if the welcome email checkbox is ticked when you import).
-
-2. **The moment a lead signs up** - for leads captured via a public report unlock, an embed signup, or a report email signup. Submission and welcome email happen in a single step.
+For a lead you add yourself with **Add Lead**, the box on that form decides: tick **Send a welcome email to this lead** (on your phone, the **Send the welcome email** switch) and they get one.
 
 People who enquire through one of your [Facebook or Instagram property ads](/help-center/advertising/property-ad-launcher), or who register their interest in the property on your [Bio Link](/help-center/leads/bio-link), get a **thank-you email** about the property they asked about instead of the general welcome.
 
-Instant valuation leads get a separate **branded valuation email** with a link back to their result, controlled by its own switch (see below).
+Instant valuation leads don't get the welcome email. They get a separate **branded valuation email** with a link back to their result, controlled by its own switch (see below).
+
+[Imported leads](/help-center/leads/importing-leads) are never sent a welcome email.
 
 The welcome email is sent as a one-off message, not as part of a campaign.
 
@@ -22,47 +22,17 @@ The welcome email is sent as a one-off message, not as part of a campaign.
 
 Two switches in **Settings > Email settings** (under **Capturing leads**), in the **Welcome & follow-up** section at the top of the page, control what gets sent the moment a lead arrives. Both default to on and save automatically when you flip them.
 
-- **Send a welcome email to new leads** - one switch for every kind of new lead. Each lead gets the email written for how they arrived: the welcome email for report unlocks, email signups and embeds, and the thank-you naming the home for ad and bio link enquiries. Turning it off stops all of them.
+- **Send a welcome email to new leads** - one switch for every kind of new lead that arrives by itself. Each lead gets the email written for how they arrived: the welcome email for report unlocks, email signups and embeds, and the thank-you naming the home for ad and bio link enquiries. Turning it off stops all of them.
 - **Send branded valuation email** - after an instant valuation, email the lead a branded link back to their result. It has its own switch because it is the figure they asked for, not a welcome. Turn this off if your CRM already sends one.
 
 <Callout kind="info">
 If your CRM already replies to one kind of lead, such as your ad enquiries, and you want only that kind to stay quiet, get in touch and we'll help.
 </Callout>
 
-## The welcome email template
+## The welcome email
 
-Your workspace has a system-provided welcome email template. This template:
-
-- Is pre-written with sensible defaults
-
-- Uses basic personalisation variables
-
-- Includes a required unsubscribe link for compliance
-
-### Available variables
-
-The welcome email supports a limited set of safe variables:
-
-| Variable               | What it inserts                       |
-| ---------------------- | ------------------------------------- |
-| `{{lead_name}}`        | Lead's first name                     |
-| `{{location}}`         | The location associated with the lead |
-| `{{workspace_name}}`   | Your company name                     |
-| `{{unsubscribe_link}}` | Unsubscribe link (required)           |
-
-> **Note:** Report-specific variables (like `{{report_link}}` or `{{averagePrice}}`) are not available in welcome emails because the email is sent before a report context exists.
+The welcome email is written by Market Trak, and at the moment it can't be edited or swapped for one of your own templates. It greets the lead by first name, thanks them for their interest in their area's property market, links back to the report if they unlocked one, and tells them to expect monthly market updates from your agency. It ends with an unsubscribe link.
 
 ## Email delivery
 
 Welcome emails are sent using your workspace's configured email domain. If you have a custom email domain set up, the welcome email comes from your domain. Otherwise, it uses the default Market Trak sending domain.
-
-## Tips
-
-- Keep your welcome email short and friendly
-
-- Introduce your agency and what the lead can expect to receive
-
-- Include your contact details so they know how to reach you
-
-- The welcome email sets the tone for your relationship with the lead, make it count
-
