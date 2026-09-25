@@ -1,167 +1,172 @@
 ---
-title: Email Campaigns
+title: Emails
 description: >-
-  Send targeted email campaigns to your leads using templates, variables, and
-  the queue-based sending system.
+  Write, schedule and repeat emails to your leads on the Emails page, with
+  report cards, merge fields and templates, and see how every email did.
 ---
-Email campaigns let you send targeted messages to your leads with market data, report links, and personalised content. Campaigns are sent in the background so you can keep working while emails go out.
+The **Emails** page is where you write emails to your leads, send them now or later, set up emails that repeat every month, and see every email you have sent. Find it under **Nurture** in the sidebar, or under **People** on your phone.
 
-## Creating a campaign
+The page has two tabs:
 
-There are two ways to send a campaign:
+- **Sent & scheduled** shows what is waiting to go, your repeating emails, and every email sent in the last 12 months
+- **Drafts & templates** holds the emails you have started and the templates you can start from
 
-### From the Leads page
+The cog at the top right opens your email settings.
 
-1. Go to **Leads** in the sidebar
+## Writing an email
 
-2. Select the leads you want to email (use checkboxes or filters)
+Press **New email**, or pick a template on **Drafts & templates** and press **Use this template**.
 
-3. Click **Send Campaign**
+<Steps>
+<Step title="Write the subject and preview line" icon="type" titleType="p">
+The **preview line** is the short grey text inboxes show after the subject. It is optional. Use the **+** in the subject box to add a merge field, such as the lead's first name.
+</Step>
+<Step title="Write the email" icon="pencil" titleType="p">
+Type as you would in any editor. The toolbar has bold, italic, links, bullet points and headings, and the blocks you can add: **Image**, **Video**, **Button**, **Report card** and **Divider**. Press **Insert**, or type **/**, to add a merge field.
+</Step>
+<Step title="Check the preview" icon="eye" titleType="p">
+The preview beside the email shows it as your leads will see it, with the merge fields and report figures filled in. Switch between **Desktop** and **Phone** to check both.
+</Step>
+<Step title="Choose who it goes to and when" icon="send" titleType="p">
+The **Send** panel under the email sets who gets it and when. See below.
+</Step>
+</Steps>
 
-4. Choose a template or write a custom email
+Your email saves itself as a draft as you type. If you leave an email you started, you are asked whether to keep it as a draft.
 
-5. Set the subject line
+Every email ends with a footer showing your agency name and a working unsubscribe link, which cannot be removed. To add your office address under your agency name, fill in **Address in the footer (optional)** in your email settings.
 
-6. Preview the email
+### Adding a report card
 
-7. Use the buttons at the bottom to **Send to 24 people** now, or choose **Schedule for later** to pick a date and time before confirming
+A report card puts a report's headline figures in the email, with a **Read the full report** button.
 
-### From the AI Assistant
+1. Press **Report card** on the toolbar
+2. Choose the report
+3. Tick up to three figures, such as the average asking price and the price change
+4. Press **Add report card**
 
-Ask the assistant to draft and send an email campaign. See [Creating Content](/help-center/ai-assistant/creating-content) for details.
+Only shared reports are listed, because a lead cannot open a report that is not shared. You do not need a report to send an email.
 
-## Choosing recipients by area
+<Callout kind="tip">
+Images you add are shrunk for email automatically, so they load quickly in your leads' inboxes. A video shows as its picture with a play button, which opens the video.
+</Callout>
 
-When you open **Send Campaign** without pre-selecting leads, you can pick recipients by postcode district (like CM1, with the town shown alongside and a count of how many leads each district reaches). A lead is included if any of the **areas of interest** on their record matches a district you tick, so one lead can be reached for every area they have enquired about, not just their latest one. Leave everything unticked to send to all active leads.
+## Who it goes to
 
-Each district also shows when its leads last received a campaign from you, for example "emailed 2 days ago", or "never emailed" if nothing has ever gone to them. That makes it easy to spot an area you have been overlooking while you are choosing who to send to. Automatic welcome emails do not count, only campaigns you sent.
+The Send panel gives you three choices:
 
-<Image src="https://db.marketrak.pro/storage/v1/object/public/broadcast-assets/docs/docs-email-campaigns.png" width="1920" height="1080" alt="The Send Email Campaign window with recipients chosen by postcode district, a report for personalisation and a template picker" />
+- **All your areas** sends to everyone in your areas, with the number of people shown (on plans without set areas this reads **Everyone**)
+- **Choose areas** lets you tick postcode districts, each shown with its town, how many people it reaches, and when its leads were last emailed, for example "Emailed 2 days ago" or "Never emailed"
+- **Out of area** sends to leads outside your areas, including those with no area
 
-Each lead's areas build up automatically from their enquiries, and you can edit them on the lead's record. See [Managing Leads](/help-center/leads/managing-leads#the-lead-record).
+A lead is in a district if any of the **areas of interest** on their record matches it, so one lead can be reached for every area they have asked about. Each lead's areas build up from their enquiries, and you can edit them on the lead's record. See [Managing Leads](/help-center/leads/managing-leads#the-lead-record).
 
-## Scheduling a campaign for later
+To email particular people, tick them on the **Leads** page and press **Send campaign**. Choose a template, and the email goes to exactly the people you ticked.
 
-You do not have to send straight away. In the send window, choose **Schedule for later**, then pick a date and time before confirming the schedule. Write the campaign whenever suits you and let it go out on a Tuesday morning.
+The panel shows how many people it goes to and how many credits it uses before you send. Unsubscribed and bounced leads are always left out.
 
-### Who a scheduled campaign reaches
+## When it goes
 
-When you schedule by area, you choose who it should reach when the time comes:
+- **Now** sends it straight away
+- **Later** sends it at the date and time you pick
+- **Repeat** sends it every month or every week (see [Repeating emails](#repeating-emails))
 
-- **Everyone in your areas at the time** (the default) sends to the leads you can see now, plus anyone who joins those areas before it goes out. This is usually what you want, since the whole point of scheduling ahead is that more leads arrive in the meantime.
+Press **Send a test to me** to see the email in your own inbox first. When you send or schedule, you are asked to confirm, with the number of people and the credits it uses.
 
-- **Only the people on the list now** fixes the list at the moment you schedule. Anyone who joins afterwards will not get it.
+When an email has finished sending, we email you a **Campaign complete** notice saying how many people it reached.
 
-This choice only appears when you have targeted by area and picked a future time. If you hand-picked individual leads, or you are sending from a report, the list is always fixed, because there is no area rule to re-check.
+### Who a scheduled email reaches
 
-Anyone who unsubscribes between scheduling and sending is removed automatically, whichever option you choose.
+When you schedule an email to your areas, you choose who it reaches when the time comes:
+
+- **Everyone in** those areas **at the time** (the default) sends to the people on the list now, plus anyone who joins those areas before it goes out. This is usually what you want, since more leads arrive while you wait.
+- **Only the people on the list now** fixes the list when you schedule. Anyone who joins afterwards does not get it.
+
+This choice only appears for emails sent to your areas. If you chose particular people, the list is always fixed. Anyone who unsubscribes before it goes out is removed automatically.
 
 ### Changing or cancelling
 
-Scheduled campaigns wait on the **Scheduled** tab on the Leads page, showing when each one goes out and how many people it reaches. You can cancel any of them right up until they send. Cancelling does not delete anything, so you can build the campaign again if you change your mind.
+Scheduled emails wait at the top of **Sent & scheduled**, showing when each one goes and how many people it reaches. Press **Change time** to move it, or **Cancel** to stop it, right up until it sends. A cancelled email goes back to your drafts, so you can change it and send it again.
 
-## Email templates
+## Repeating emails
 
-Templates save time when you send similar emails regularly. Each template includes:
+A repeating email works out who it goes to each time it sends, so new leads in its areas get it too.
 
-- **Subject line** - with optional variable placeholders
+1. Write the email, then choose **Repeat** in the Send panel
+2. Choose **Every month** (recommended, because report figures change monthly) or **Every week**
+3. Pick the date and time of the first send
 
-- **Email body** - HTML content with variables
+Your repeating emails show as cards on **Sent & scheduled**, each marked **On** or **Paused**, with who it goes to, when it sends next and how many it has sent so far. Press **Pause** to stop it for a while, **Resume** to start it again, or the bin to delete it.
 
-- **Variable placeholders** - automatically filled with lead and report data
+The **Month** merge field always shows the month the email goes out. If you run short of credits, a repeating email pauses itself and shows why. Press **Resume** once you have topped up.
 
-### Template editor
+## Templates
 
-The template editor lets you write and preview your email. You can:
+Templates on **Drafts & templates** come in two groups: **Your templates**, which you make and edit, and **Market Trak templates**, which we write and keep up to date. Pick one to see it large on the right, then:
 
-- Format text with a rich editor
+- **Use this template** starts a new email from it
+- **Edit** opens one of your templates to change it
+- **Duplicate** makes your own copy of one of ours, to change as you like
 
-- Insert variables from a picker
+An email you start from a template never changes the template. If you have edited a template and press **Use this template** before saving, you are asked whether your changes go into the template (**Save and use**) or only into this email (**This email only**).
 
-- Preview how variables will render
+To keep an email you have written for next time, press **Save as template** at the top of the email.
 
-- Save templates for reuse
+## Merge fields
 
-### Available variables
+Merge fields fill in each lead's own details when the email is sent. In the email they show as coloured labels. The assistant and older templates write them in curly brackets, as in the last column.
 
-| Variable               | What it inserts              | Example                            |
-| ---------------------- | ---------------------------- | ---------------------------------- |
-| `{{lead_name}}`        | Lead's first name            | "Sarah"                            |
-| `{{location}}`         | Property or report location  | "Didsbury"                        |
-| `{{workspace_name}}`   | Your company name            | "Smith & Co"                       |
-| `{{report_title}}`     | Title of the linked report   | "Didsbury Property Market Report" |
-| `{{report_link}}`      | Clickable link to the report | A styled hyperlink                 |
-| `{{current_date}}`     | Month the email is sent      | "March"                            |
-| `{{averagePrice}}`     | Average price with currency  | "£456,789"                         |
-| `{{priceChange}}`      | Price trend with sign        | "+5%"                              |
-| `{{marketTrend}}`      | Trend direction              | "Rising"                           |
-| `{{demandRating}}`     | Demand level                 | "High"                             |
-| `{{daysOnMarket}}`     | Average days on market       | "45"                               |
-| `{{salesVolume}}`      | Sales per month              | "120pm"                            |
-| `{{unsubscribe_link}}` | Unsubscribe link (required)  | A styled hyperlink                 |
+| Merge field | What it puts in | Written as |
+| ----------- | --------------- | ---------- |
+| First name | Their first name, or "there" if we do not have one | `{{lead_name}}` |
+| Area | The report's area, or their own area if no report is chosen | `{{location}}` |
+| Valuation link | A link to their own valuation, blank if they have not had one | `{{valuation_link}}` |
+| Agency name | Your agency name | `{{workspace_name}}` |
+| Sender name | The name your emails come from | `{{sender_name}}` |
+| Month | The month the email is sent, for example "March" | `{{current_date}}` |
+| Report link | A link to the report, showing its title | `{{report_link}}` |
+| Report title | The report's title | `{{report_title}}` |
+| Report date | The date the report was made | `{{report_date}}` |
+| Average asking price | Average asking price of homes for sale in the area | `{{averagePrice}}` |
+| Price change (year on year) | How prices have moved over the last year | `{{priceChange}}` |
+| Market trend | Growth, Stable or Decline | `{{marketTrend}}` |
+| Demand | Buyer demand: High, Balanced or Low | `{{demandRating}}` |
+| Days on market | Average days a home in the area is on the market | `{{daysOnMarket}}` |
+| Sales per month | Average number of homes sold each month in the area | `{{salesVolume}}` |
 
-> **Important:** Every campaign email must include `{{unsubscribe_link}}` for legal compliance.
+The report fields need a report chosen for the email.
 
-## How sending works
+## On your phone
 
-When you send a campaign, it does not send all emails at once. Instead:
+The same email builder works on your phone. It shows in one column: the email, then its preview (so you see the figures before you send), then the Send panel. Your drafts show on **Drafts & templates**, each with a bin to delete it. Templates are written on a computer.
 
-1. The campaign is **queued** instantly (you see confirmation within a second)
+## Sending from the assistant
 
-2. A background job **processes the queue** every 2 minutes
+You can ask the assistant to write and send an email for you. It shows you the email and asks before it sends anything. Emails sent this way appear in **Sent & scheduled** like any other. See [Creating Content](/help-center/ai-assistant/creating-content).
 
-3. Emails are sent in **batches** to respect provider rate limits
+## Seeing how your emails did
 
-4. You receive a **notification** when the campaign is complete
+**Sent** lists every email from the last 12 months, grouped by month. Each shows how many people it reached and what share of them opened it and clicked a link. Press an email sent from the Emails page or the assistant to see it exactly as it went out.
 
-This queue system means:
+Automatic welcome emails are left out. They go to one lead at a time and are not emails you chose to send, so counting them would flatter your figures. They still show on each lead's own record.
 
-- Sending a campaign never blocks you from using the app
+### Open and click tracking
 
-- Large campaigns (hundreds of leads) are handled smoothly
+Every email records when a lead opens it, and every link records when it is clicked before taking the reader straight on to where it goes. You do not need to set anything up, your links work exactly as normal, and unsubscribe links are never tracked.
 
-- Rate limits are respected automatically
+Clicks are worth watching more than opens. Some mail apps open the tracking on the lead's behalf and others block it, so open figures are always a little blurred, whereas a click is a real person choosing to look at what you sent.
 
-- Failed emails are retried with exponential backoff
+For more, go to **Analytics** under **Measure** in the sidebar and find the **How your emails land** card: your email opens for the period you pick, your open rate, and each email with its opens and clicks.
 
 ## When a lead replies
 
-Campaign emails are sent from Market Trak, but they are set up so that replies come to you, not to us. When someone on your list replies to a market update, it arrives in the inbox on your account, and hitting reply puts you straight back in touch with them.
+Emails are sent from Market Trak, but replies come to you, not to us. When someone replies to one of your emails, it arrives in your inbox, and hitting reply puts you straight back in touch with them.
 
-A small number of mail systems answer automatically rather than sending a real reply, and those answers go to the hidden address email providers use for delivery reports instead of to you. Market Trak now picks those up and forwards them on, so nothing gets lost. Empty automatic responses, such as out-of-office notices with no message in them, are left out, so you only hear about a reply when there is something to read.
+A small number of mail systems answer automatically rather than sending a real reply, and those answers go to a hidden address email providers use for delivery reports. Market Trak picks those up and forwards them to you, so nothing gets lost. Empty automatic answers, such as out-of-office notices with no message in them, are left out.
 
 <Callout kind="tip">
-If you want replies to go somewhere other than your account email, such as a shared office inbox, set a **Reply-to address** in **Settings > Workspace Settings > Leads > Email Settings**. It applies to every email your leads get from you, with or without a custom sending domain, and automatic replies we forward on go there too.
+If you want replies to go somewhere other than your account email, such as a shared office inbox, set a **Reply-to address** in **Settings > Workspace Settings > Leads > Email Settings**. It applies to every email your leads get from you, with or without a custom sending domain, and automatic replies we forward go there too.
 </Callout>
-
-## Campaign tracking
-
-After sending, you can see the campaign status:
-
-| Status               | Meaning                                     |
-| -------------------- | ------------------------------------------- |
-| **Queued**           | Campaign is waiting to be processed         |
-| **Processing**       | Emails are being sent                       |
-| **Completed**        | All emails sent successfully                |
-| **Partially Failed** | Some emails failed (e.g. bounced addresses) |
-
-## Open and click tracking
-
-Every campaign email includes a tracking pixel that records when a lead opens the email, and every link in it records when it is clicked before sending the reader straight on to where the link goes. You do not need to configure anything; both are automatic, your links behave exactly as before, and unsubscribe links are never tracked.
-
-Clicks are worth watching more than opens. Some mail apps open the tracking pixel on the lead's behalf, and others block it, so open counts are always a little blurred; a click is a real person choosing to look at what you sent.
-
-To see your email engagement data, go to **Analytics** under **Measure** in the sidebar and find the **How your emails land** card. You will see:
-
-- **Email opens** for the period you pick at the top of the page, with your blended open rate
-- **Each campaign** with its recipients, when it went, its opens and its open rate, strongest rates highlighted
-- **Clicks** under each campaign's opens, once it has some (campaigns sent before click tracking arrived on 30 August 2026 have none to show)
-
-Each campaign is listed by the subject line your recipients actually saw, with any placeholders filled in, so a campaign built from `{{location}} Market Update - {{current_date}}` appears as "KA7 Market Update - July".
-
-Automatic welcome emails are left out of this table. They go to one lead at a time and are not campaigns you chose to run, so counting them would flatter your open rates and bury the campaigns you actually sent. They still appear on each lead's own record.
-
-The dashboard also shows a quick summary of email opens in the Engagement Snapshot widget.
 
 ## Email limits
 
@@ -169,13 +174,8 @@ Your plan includes a monthly email sending limit. Check your current usage in th
 
 ## Tips
 
-- Personalise with `{{lead_name}}` to boost open rates
-
-- Link to a specific report with `{{report_link}}` so leads can explore the data
-
+- Add a report card so each email carries fresh figures for the area
+- Use the **First name** merge field to make each email feel personal
 - Keep subject lines under 60 characters
-
-- Include market data variables (prices, trends) to make emails feel current and relevant
-
-- Send campaigns during business hours for best engagement
-
+- Send a test to yourself and read it on your phone before sending
+- A monthly repeating email keeps you in front of every lead without you having to remember
