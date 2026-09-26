@@ -46,9 +46,13 @@ James Wilson,james@example.com,Didsbury M21,07700900001
 
 ## Field mapping
 
-After uploading, you will see a mapping screen where you match your CSV columns to Market Trak fields. Each column can be set to **Email**, **Full name**, **First name**, **Last name**, **Phone**, **Location** or **Ignore**.
+After uploading, you will see a mapping screen where you match your CSV columns to Market Trak fields. Each column can be set to **Email**, **Full name**, **First name**, **Last name**, **Phone**, **Location (postcode)** or **Ignore**.
 
 If your column headers use the usual names (such as "Email", "Name", "Surname", "Mobile" or "Postcode"), mapping happens automatically. Otherwise, use the drop-downs to assign each column. At least one column must be mapped to **Email** before you can import.
+
+Each field takes one column. If you choose a field that another column already has, it moves to the column you just changed, and the other goes back to **Ignore**.
+
+**Location (postcode)** only takes a column with postcodes in it: a postcode column, or an address that includes the postcode. A column without them, such as a town name, can't be the location, and the mapping screen tells you so. If none of your columns has postcodes, the screen says the leads won't be in any of your areas; you can still import them and give them an area afterwards (see [Locations and areas](#locations-and-areas)).
 
 ## Duplicates
 
@@ -74,7 +78,7 @@ The import respects your plan's contact limit. If importing would take you over 
 
 A lead's areas come from the postcode in their location. A location with a postcode or a postcode district, such as "M21 8AB" or "Didsbury M21", gives the lead that area.
 
-A location that is only a town name, such as "Didsbury", gives the lead no area. That lead won't get emails you send to your areas until it has one. You can add an area on the lead's record, under **Areas of interest** (see [Managing Leads](/help-center/leads/managing-leads#the-lead-record)).
+A lead with no postcode has no area, and won't get emails you send to your areas until it has one. To give many leads an area at once, go to the Leads page, choose **No area** in the Area filter, tick the leads (or **Select all**), then use **Area** > **Add an area** in the bulk actions bar (see [Managing Leads](/help-center/leads/managing-leads#bulk-actions)). For one lead, add it on the lead's record, under **Areas of interest**.
 
 ## After importing
 
