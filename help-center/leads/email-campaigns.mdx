@@ -160,25 +160,32 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 
 | Merge field | What it puts in | Written as |
 | ----------- | --------------- | ---------- |
-| First name | Their first name, or "there" if we do not have one | `{{lead_name}}` |
-| Area | The report's area, or their own area if no report is chosen | `{{location}}` |
-| Valuation link | A link to their own valuation, blank if they have not had one | `{{valuation_link}}` |
+| **Personalise** | | |
 | Agency name | Your agency name | `{{workspace_name}}` |
+| Area | The report's area, or theirs | `{{location}}` |
+| Booking link | Your calendar booking link. Blank if you have not saved one | `{{booking_link}}` |
+| First name | Or "there" if we do not have one | `{{lead_name}}` |
+| Month | This month, for example "September" | `{{current_date}}` |
 | Sender name | The name your emails come from | `{{sender_name}}` |
-| Month | The month the email is sent, for example "March" | `{{current_date}}` |
-| Property address | The property they last asked about on one of your ads or your Bio Link, as it showed it. "the property" if they have not asked about one | `{{property_address}}` |
-| Property street and postcode | The street of that property and the start of its postcode, for example "Grange Road, MK45" (just the street when we have no postcode) | `{{property_street}}` |
-| Report link | A link to the report, showing its title | `{{report_link}}` |
-| Report title | The report's title | `{{report_title}}` |
-| Report date | The date the report was made | `{{report_date}}` |
-| Average asking price | Average asking price of homes for sale in the area | `{{averagePrice}}` |
-| Price change (year on year) | How prices have moved over the last year | `{{priceChange}}` |
+| **From the property** | | |
+| Full address | The property they asked about on one of your ads or your Bio Link | `{{property_address}}` |
+| Street and postcode | For example "Elm Road, M20" | `{{property_street}}` |
+| **From the valuation** | | |
+| Valuation address | The home they valued. Blank if they have none | `{{valuation_address}}` |
+| Valuation link | A link to their valuation. Blank if they have none | `{{valuation_link}}` |
+| Valuation price | Their valuation price. Blank if they have none | `{{valuation_price}}` |
+| **From the report** | | |
+| Average asking price | Homes for sale in the area | `{{averagePrice}}` |
+| Average days on market | Left out when there is no reliable figure | `{{daysOnMarket}}` |
+| Demand | High, Balanced or Low | `{{demandRating}}` |
 | Market trend | Growth, Stable or Decline | `{{marketTrend}}` |
-| Demand | Buyer demand: High, Balanced or Low | `{{demandRating}}` |
-| Days on market | How long homes for sale in the area have typically been on the market, in days. Over 120 days, the line is left out | `{{daysOnMarket}}` |
-| Sales per month | Average number of homes sold each month in the area | `{{salesVolume}}` |
+| Price change (year on year) | Over the last year | `{{priceChange}}` |
+| Report date | When the report was made | `{{report_date}}` |
+| Report link | A link to the report | `{{report_link}}` |
+| Report title | The report's title | `{{report_title}}` |
+| Sales per month | Homes sold each month in the area | `{{salesVolume}}` |
 
-The report fields need a report chosen for the email. In the **Insert** menu the fields sit in three groups, **Personalise**, **From the property** and **From the report**, and every email, template and automatic email uses the same groups, showing only the fields it can fill.
+The report fields need a report chosen for the email. The **Insert** menu shows the same four groups in every email, each in alphabetical order, and only the fields that can be filled: **Booking link** only once you have saved one in **Settings > Branding**, **From the valuation** once a lead has valued their home, and **From the property** once someone has asked about a property on one of your ads or your Bio Link. **Full address** and **Street and postcode** read "the property" for a lead who has not asked about one.
 
 ## On your phone
 
