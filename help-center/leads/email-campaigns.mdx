@@ -166,6 +166,8 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 | Agency name | Your agency name | `{{workspace_name}}` |
 | Sender name | The name your emails come from | `{{sender_name}}` |
 | Month | The month the email is sent, for example "March" | `{{current_date}}` |
+| Property address | The property they last asked about on one of your ads or your Bio Link, as it showed it. "the property" if they have not asked about one | `{{property_address}}` |
+| Property street and postcode | The street of that property and the start of its postcode, for example "Grange Road, MK45" (just the street when we have no postcode) | `{{property_street}}` |
 | Report link | A link to the report, showing its title | `{{report_link}}` |
 | Report title | The report's title | `{{report_title}}` |
 | Report date | The date the report was made | `{{report_date}}` |
@@ -176,7 +178,7 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 | Days on market | How long homes for sale in the area have typically been on the market, in days. Over 120 days, the line is left out | `{{daysOnMarket}}` |
 | Sales per month | Average number of homes sold each month in the area | `{{salesVolume}}` |
 
-The report fields need a report chosen for the email.
+The report fields need a report chosen for the email. In the **Insert** menu the fields sit in three groups, **Personalise**, **From the property** and **From the report**, and every email, template and automatic email uses the same groups, showing only the fields it can fill.
 
 ## On your phone
 
