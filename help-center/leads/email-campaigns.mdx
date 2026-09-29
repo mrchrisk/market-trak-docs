@@ -202,9 +202,9 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 | Full address | The property they asked about on one of your ads or your Bio Link | `{{property_address}}` |
 | Street and postcode | For example "Elm Road, M20" | `{{property_street}}` |
 | **From the valuation** | | |
-| Valuation address | The home they valued. Blank if they have none | `{{valuation_address}}` |
-| Valuation link | A link to their valuation. Blank if they have none | `{{valuation_link}}` |
-| Valuation price | Their valuation price. Blank if they have none | `{{valuation_price}}` |
+| Valuation address | The home they valued. Only goes to leads who have one | `{{valuation_address}}` |
+| Valuation link | A link to their valuation. Only goes to leads who have one | `{{valuation_link}}` |
+| Valuation price | Their valuation price. Only goes to leads who have one | `{{valuation_price}}` |
 | **From the report** | | |
 | Average asking price | Homes for sale in the area | `{{averagePrice}}` |
 | Average days on market | Left out when there is no reliable figure | `{{daysOnMarket}}` |
@@ -218,7 +218,7 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 
 Use **Website link** for a line such as "For our full list of homes, visit www.youragency.co.uk": it shows your website's address and opens the page you saved. If you have no website saved, the sentence holding it is left out, as it is for **Booking link**.
 
-The report fields need a report chosen for the email. The **Insert** menu shows the same four groups in every email, each in alphabetical order, and only the fields that can be filled: **Booking link** and **Website link** only once you have saved them in **Settings > Branding** (your Calendar Booking Link and your Business Website), **From the valuation** once a lead has valued their home, and **From the property** once someone has asked about a property on one of your ads or your Bio Link. **Full address** and **Street and postcode** read "the property" for a lead who has not asked about one.
+An email that uses a **From the valuation** field only goes to the leads who have done an instant valuation, so nobody gets a gap where their price would be. The Send panel shows how many are left out. The report fields need a report chosen for the email. The **Insert** menu shows the same four groups in every email, each in alphabetical order, and only the fields that can be filled: **Booking link** and **Website link** only once you have saved them in **Settings > Branding** (your Calendar Booking Link and your Business Website), **From the valuation** once a lead has valued their home, and **From the property** once someone has asked about a property on one of your ads or your Bio Link. **Full address** and **Street and postcode** read "the property" for a lead who has not asked about one.
 
 ## On your phone
 
