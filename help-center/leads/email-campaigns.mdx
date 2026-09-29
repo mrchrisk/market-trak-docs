@@ -192,15 +192,15 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 | ----------- | --------------- | ---------- |
 | **Personalise** | | |
 | Agency name | Your agency name | `{{workspace_name}}` |
-| Area | The report's area, or theirs | `{{location}}` |
+| Area | The report's area. With no report, theirs, and it only goes to leads who have one | `{{location}}` |
 | Booking link | Your calendar booking link. Blank if you have not saved one | `{{booking_link}}` |
 | First name | Or "there" if we do not have one | `{{lead_name}}` |
 | Month | This month, for example "September" | `{{current_date}}` |
 | Sender name | The name your emails come from | `{{sender_name}}` |
 | Website link | Your website, shown as its address, for example "www.youragency.co.uk". Blank if you have not saved one | `{{website_link}}` |
 | **From the property** | | |
-| Full address | The property they asked about on one of your ads or your Bio Link | `{{property_address}}` |
-| Street and postcode | For example "Elm Road, M20" | `{{property_street}}` |
+| Full address | The property they asked about on one of your ads or your Bio Link. Only goes to leads who asked about one | `{{property_address}}` |
+| Street and postcode | For example "Elm Road, M20". Only goes to leads who asked about a property | `{{property_street}}` |
 | **From the valuation** | | |
 | Valuation address | The home they valued. Only goes to leads who have one | `{{valuation_address}}` |
 | Valuation link | A link to their valuation. Only goes to leads who have one | `{{valuation_link}}` |
@@ -218,7 +218,7 @@ Merge fields fill in each lead's own details when the email is sent. In the emai
 
 Use **Website link** for a line such as "For our full list of homes, visit www.youragency.co.uk": it shows your website's address and opens the page you saved. If you have no website saved, the sentence holding it is left out, as it is for **Booking link**.
 
-An email that uses a **From the valuation** field only goes to the leads who have done an instant valuation, so nobody gets a gap where their price would be. The Send panel shows how many are left out. The report fields need a report chosen for the email. The **Insert** menu shows the same four groups in every email, each in alphabetical order, and only the fields that can be filled: **Booking link** and **Website link** only once you have saved them in **Settings > Branding** (your Calendar Booking Link and your Business Website), **From the valuation** once a lead has valued their home, and **From the property** once someone has asked about a property on one of your ads or your Bio Link. **Full address** and **Street and postcode** read "the property" for a lead who has not asked about one.
+An email that shows something of each person's own only goes to the leads who have it, so nobody gets a gap where their price or address would be. That means a **From the valuation** field (leads who have done an instant valuation), a **From the property** field (leads who asked about a property on one of your ads or your Bio Link), and **Area** in an email with no report (leads with an area; with a report, **Area** is the report's, so nobody is left out for it). The Send panel shows how many are left out and why. **First name** never leaves anyone out: it reads "there" when we don't have one. The report fields need a report chosen for the email. The **Insert** menu shows the same four groups in every email, each in alphabetical order, and only the fields that can be filled: **Booking link** and **Website link** only once you have saved them in **Settings > Branding** (your Calendar Booking Link and your Business Website), **From the valuation** once a lead has valued their home, and **From the property** once someone has asked about a property on one of your ads or your Bio Link.
 
 ## On your phone
 
