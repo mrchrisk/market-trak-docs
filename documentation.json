@@ -60,6 +60,10 @@
                 "path": "help-center/getting-started/install-the-app"
               },
               {
+                "title": "Getting Help",
+                "path": "help-center/getting-started/getting-help"
+              },
+              {
                 "title": "Content Strategy Guide",
                 "path": "help-center/social-media/content-strategy"
               }
